@@ -1,0 +1,13 @@
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.exe
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
+C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
