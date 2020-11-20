@@ -34,6 +34,8 @@
             this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPregunta = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -95,11 +97,33 @@
             this.textBoxPregunta.Size = new System.Drawing.Size(376, 97);
             this.textBoxPregunta.TabIndex = 5;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 271);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "label4";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(17, 321);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(212, 22);
+            this.textBox1.TabIndex = 7;
+            // 
             // InsertarPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(420, 512);
+=======
+            this.ClientSize = new System.Drawing.Size(590, 630);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+>>>>>>> 41c833c9f4eacf709db7159527648747718eab2e
             this.Controls.Add(this.textBoxPregunta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxIdioma);
@@ -122,5 +146,7 @@
         private System.Windows.Forms.ComboBox comboBoxIdioma;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxPregunta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
