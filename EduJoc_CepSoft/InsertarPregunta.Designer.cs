@@ -1,6 +1,6 @@
 ﻿namespace EduJoc_CepSoft
 {
-    partial class InsertarPreguntas
+    partial class InsertarPregunta
     {
         /// <summary>
         /// Required designer variable.
