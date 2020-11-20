@@ -61,6 +61,12 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioPruebaGit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioPruebaGit.Designer.cs">
+      <DependentUpon>FormularioPruebaGit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

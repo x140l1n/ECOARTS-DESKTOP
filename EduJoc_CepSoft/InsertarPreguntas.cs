@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EduJoc_CepSoft
 {
-    public partial class FormularioPruebaGit : Form
+    public partial class InsertarPreguntas : Form
     {
-        public FormularioPruebaGit()
+        public InsertarPreguntas()
         {
             InitializeComponent();
         }
