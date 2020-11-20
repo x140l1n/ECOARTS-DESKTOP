@@ -37,7 +37,6 @@ namespace EduJoc_CepSoft
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnTemas = new System.Windows.Forms.ToolStripButton();
             this.btnPersonajes = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
@@ -69,7 +68,6 @@ namespace EduJoc_CepSoft
             this.btnEliminar,
             this.btnGuardar,
             this.toolStripSeparator1,
-            this.btnTemas,
             this.btnPersonajes,
             this.toolStripSeparator2,
             this.btnSalir});
@@ -118,15 +116,6 @@ namespace EduJoc_CepSoft
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
-            // 
-            // btnTemas
-            // 
-            this.btnTemas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnTemas.Image = ((System.Drawing.Image)(resources.GetObject("btnTemas.Image")));
-            this.btnTemas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTemas.Name = "btnTemas";
-            this.btnTemas.Size = new System.Drawing.Size(34, 34);
-            this.btnTemas.Text = "Gestionar temas";
             // 
             // btnPersonajes
             // 
@@ -249,7 +238,7 @@ namespace EduJoc_CepSoft
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -337,7 +326,6 @@ namespace EduJoc_CepSoft
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btnTemas;
         private System.Windows.Forms.ToolStripButton btnPersonajes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnSalir;
