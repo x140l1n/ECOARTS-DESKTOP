@@ -61,17 +61,20 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioPruebaGit.cs">
+    <Compile Include="InsertarPreguntas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormularioPruebaGit.Designer.cs">
-      <DependentUpon>FormularioPruebaGit.cs</DependentUpon>
+    <Compile Include="InsertarPreguntas.Designer.cs">
+      <DependentUpon>InsertarPreguntas.cs</DependentUpon>
     </Compile>
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarPreguntas.resx">
+      <DependentUpon>InsertarPreguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
