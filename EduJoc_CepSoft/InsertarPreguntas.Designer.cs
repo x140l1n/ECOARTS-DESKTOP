@@ -36,25 +36,25 @@
             this.textBoxPregunta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(25, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tema: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(216, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(288, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Idioma: ";
             // 
@@ -62,39 +62,38 @@
             // 
             this.comboBoxTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTema.FormattingEnabled = true;
-            this.comboBoxTema.Location = new System.Drawing.Point(21, 35);
-            this.comboBoxTema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTema.Location = new System.Drawing.Point(28, 43);
+            this.comboBoxTema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTema.Name = "comboBoxTema";
-            this.comboBoxTema.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxTema.Size = new System.Drawing.Size(240, 24);
             this.comboBoxTema.TabIndex = 2;
             // 
             // comboBoxIdioma
             // 
             this.comboBoxIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdioma.FormattingEnabled = true;
-            this.comboBoxIdioma.Location = new System.Drawing.Point(218, 35);
-            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxIdioma.Location = new System.Drawing.Point(291, 43);
+            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxIdioma.Name = "comboBoxIdioma";
-            this.comboBoxIdioma.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxIdioma.Size = new System.Drawing.Size(240, 24);
             this.comboBoxIdioma.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(25, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Pregunta";
             // 
             // textBoxPregunta
             // 
-            this.textBoxPregunta.Location = new System.Drawing.Point(21, 78);
-            this.textBoxPregunta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPregunta.Location = new System.Drawing.Point(28, 96);
+            this.textBoxPregunta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPregunta.Multiline = true;
             this.textBoxPregunta.Name = "textBoxPregunta";
-            this.textBoxPregunta.Size = new System.Drawing.Size(376, 97);
+            this.textBoxPregunta.Size = new System.Drawing.Size(500, 118);
             this.textBoxPregunta.TabIndex = 5;
             // 
             // label4
@@ -113,24 +112,35 @@
             this.textBox1.Size = new System.Drawing.Size(212, 22);
             this.textBox1.TabIndex = 7;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(44, 266);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "label5";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(37, 307);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 7;
+            // 
             // InsertarPreguntas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(420, 512);
-=======
-            this.ClientSize = new System.Drawing.Size(590, 630);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
->>>>>>> 41c833c9f4eacf709db7159527648747718eab2e
+            this.ClientSize = new System.Drawing.Size(560, 630);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxPregunta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.comboBoxTema);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InsertarPreguntas";
             this.Text = "Insertar pregunta";
             this.ResumeLayout(false);
@@ -148,5 +158,7 @@
         private System.Windows.Forms.TextBox textBoxPregunta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
