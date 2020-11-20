@@ -11,3 +11,17 @@ C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj
 C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
 C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
 C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarPregunta.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.exe
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.pdb

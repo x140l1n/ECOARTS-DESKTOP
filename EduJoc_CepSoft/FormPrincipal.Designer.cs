@@ -49,7 +49,6 @@ namespace EduJoc_CepSoft
             this.tbFiltrarPregunta = new System.Windows.Forms.TextBox();
             this.dgvPreguntas = new System.Windows.Forms.DataGridView();
             this.columnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnIdioma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnPregunta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripPrincipal.SuspendLayout();
@@ -143,7 +142,7 @@ namespace EduJoc_CepSoft
             // 
             // gbFiltrar
             // 
-            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbFiltrar.Controls.Add(this.btnBuscar);
             this.gbFiltrar.Controls.Add(this.cmbFiltrarTema);
@@ -197,7 +196,7 @@ namespace EduJoc_CepSoft
             // 
             // panelTbBuscar
             // 
-            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTbBuscar.BackColor = System.Drawing.Color.White;
             this.panelTbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -220,7 +219,7 @@ namespace EduJoc_CepSoft
             // 
             // tbFiltrarPregunta
             // 
-            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFiltrarPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFiltrarPregunta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,13 +227,12 @@ namespace EduJoc_CepSoft
             this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
             this.tbFiltrarPregunta.Size = new System.Drawing.Size(237, 18);
             this.tbFiltrarPregunta.TabIndex = 1;
-            this.tbFiltrarPregunta.Text = "Buscar pregunta...";
             // 
             // dgvPreguntas
             // 
             this.dgvPreguntas.AllowUserToAddRows = false;
-            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
@@ -248,13 +246,11 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPreguntas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnId,
-            this.columnIdioma,
             this.columnTema,
             this.columnPregunta});
             this.dgvPreguntas.EnableHeadersVisualStyles = false;
             this.dgvPreguntas.Location = new System.Drawing.Point(12, 112);
             this.dgvPreguntas.Name = "dgvPreguntas";
-            this.dgvPreguntas.ReadOnly = true;
             this.dgvPreguntas.Size = new System.Drawing.Size(759, 434);
             this.dgvPreguntas.TabIndex = 2;
             // 
@@ -264,24 +260,15 @@ namespace EduJoc_CepSoft
             this.columnId.Frozen = true;
             this.columnId.HeaderText = "#";
             this.columnId.Name = "columnId";
-            this.columnId.ReadOnly = true;
             this.columnId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.columnId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.columnId.Width = 50;
-            // 
-            // columnIdioma
-            // 
-            this.columnIdioma.DataPropertyName = "idioma";
-            this.columnIdioma.HeaderText = "Idioma";
-            this.columnIdioma.Name = "columnIdioma";
-            this.columnIdioma.ReadOnly = true;
             // 
             // columnTema
             // 
             this.columnTema.DataPropertyName = "tema";
             this.columnTema.HeaderText = "Tema";
             this.columnTema.Name = "columnTema";
-            this.columnTema.ReadOnly = true;
             // 
             // columnPregunta
             // 
@@ -289,7 +276,6 @@ namespace EduJoc_CepSoft
             this.columnPregunta.DataPropertyName = "pregunta";
             this.columnPregunta.HeaderText = "Pregunta";
             this.columnPregunta.Name = "columnPregunta";
-            this.columnPregunta.ReadOnly = true;
             // 
             // FormPrincipal
             // 
@@ -338,7 +324,6 @@ namespace EduJoc_CepSoft
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvPreguntas;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnIdioma;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTema;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPregunta;
     }

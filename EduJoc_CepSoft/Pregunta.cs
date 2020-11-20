@@ -8,7 +8,7 @@ namespace EduJoc_CepSoft
         public string tema { set; get; }
         public string pregunta { set; get; }
 
-        public Pregunta(int id, string tema, string idioma, string pregunta)
+        public Pregunta(int id, string tema, string pregunta)
         {
             this.id = id;
             this.tema = tema ?? throw new ArgumentNullException(nameof(tema));
@@ -16,7 +16,7 @@ namespace EduJoc_CepSoft
         }
 
         /// <summary>
-        /// Comprobar si las dos preguntas son iguales.
+        /// Comprobar si las dos preguntas son iguales. Son iguales cuando tienen la misma pregunta y del mismo tema.
         /// </summary>
         /// <param name="other">La pregunta que vamos a comparar.</param>
         /// <returns>Devuelve true si las dos preguntas son iguales, caso contrario, false.</returns>
