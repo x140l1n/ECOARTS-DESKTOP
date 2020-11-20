@@ -10,10 +10,9 @@ namespace EduJoc_CepSoft
 {
     public partial class FormPrincipal : Form
     {
-        /// <summary>
-        /// La ruta del fichero json preguntas.
-        /// </summary>
-        private const string PREGUNTAS_JSON = "preguntas.json";
+        private const string PREGUNTAS_JSON_ES = "//Preguntas//preguntas_es.json";
+        private const string PREGUNTAS_JSON_CA = "//Preguntas//preguntas_ca.json";
+        private const string PREGUNTAS_JSON_EN = "//Preguntas//preguntas_en.json";
 
         private BindingList<Pregunta> preguntas;
 
@@ -30,9 +29,9 @@ namespace EduJoc_CepSoft
 
         private void CargarPreguntas()
         {
-            if (File.Exists(PREGUNTAS_JSON))
+            if (File.Exists(PREGUNTAS_JSON_ES))
             {
-                JArray arrayPreguntas = JArray.Parse(File.ReadAllText(PREGUNTAS_JSON));
+                JArray arrayPreguntas = JArray.Parse(File.ReadAllText(PREGUNTAS_JSON_ES));
                 preguntas = arrayPreguntas.ToObject<BindingList<Pregunta>>();
             }
 
@@ -42,7 +41,7 @@ namespace EduJoc_CepSoft
         private void GuardarPreguntas()
         {
             JArray arrayPreguntas = (JArray)JToken.FromObject(preguntas);
-            StreamWriter ficheroSalida = File.CreateText(PREGUNTAS_JSON);
+            StreamWriter ficheroSalida = File.CreateText(PREGUNTAS_JSON_ES);
             JsonTextWriter jsonTextWriter = new JsonTextWriter(ficheroSalida);
 
             arrayPreguntas.WriteTo(jsonTextWriter);
