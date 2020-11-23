@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EduJoc_CepSoft
 {
@@ -8,6 +9,7 @@ namespace EduJoc_CepSoft
         public string tema { set; get; }
         public string pregunta { set; get; }
 
+        List<Respuesta> respuestas = new List<Respuesta>();
         public Pregunta(int id, string tema, string pregunta)
         {
             this.id = id;

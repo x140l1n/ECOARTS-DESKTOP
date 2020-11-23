@@ -39,16 +39,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxResp1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxResp2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonResp1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonResp2 = new System.Windows.Forms.RadioButton();
+            this.textBoxResp3 = new System.Windows.Forms.TextBox();
+            this.groupBoxRespuestas = new System.Windows.Forms.GroupBox();
             this.radioButtonResp3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonResp2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonResp1 = new System.Windows.Forms.RadioButton();
             this.labelId = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxRespuestas.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -146,13 +146,13 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Respuesta 2";
             // 
-            // textBox2
+            // textBoxResp2
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 460);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 87);
-            this.textBox2.TabIndex = 9;
+            this.textBoxResp2.Location = new System.Drawing.Point(26, 460);
+            this.textBoxResp2.Multiline = true;
+            this.textBoxResp2.Name = "textBoxResp2";
+            this.textBoxResp2.Size = new System.Drawing.Size(380, 87);
+            this.textBoxResp2.TabIndex = 9;
             // 
             // label7
             // 
@@ -163,37 +163,36 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Respuesta 3";
             // 
-            // textBox3
+            // textBoxResp3
             // 
-            this.textBox3.Location = new System.Drawing.Point(26, 593);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(381, 87);
-            this.textBox3.TabIndex = 11;
+            this.textBoxResp3.Location = new System.Drawing.Point(26, 593);
+            this.textBoxResp3.Multiline = true;
+            this.textBoxResp3.Name = "textBoxResp3";
+            this.textBoxResp3.Size = new System.Drawing.Size(381, 87);
+            this.textBoxResp3.TabIndex = 11;
             // 
-            // groupBox1
+            // groupBoxRespuestas
             // 
-            this.groupBox1.Controls.Add(this.radioButtonResp3);
-            this.groupBox1.Controls.Add(this.radioButtonResp2);
-            this.groupBox1.Controls.Add(this.radioButtonResp1);
-            this.groupBox1.Location = new System.Drawing.Point(413, 330);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(112, 350);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxRespuestas.Controls.Add(this.radioButtonResp3);
+            this.groupBoxRespuestas.Controls.Add(this.radioButtonResp2);
+            this.groupBoxRespuestas.Controls.Add(this.radioButtonResp1);
+            this.groupBoxRespuestas.Location = new System.Drawing.Point(413, 330);
+            this.groupBoxRespuestas.Name = "groupBoxRespuestas";
+            this.groupBoxRespuestas.Size = new System.Drawing.Size(112, 350);
+            this.groupBoxRespuestas.TabIndex = 12;
+            this.groupBoxRespuestas.TabStop = false;
+            this.groupBoxRespuestas.Text = "groupBox1";
             // 
-            // radioButtonResp1
+            // radioButtonResp3
             // 
-            this.radioButtonResp1.AutoSize = true;
-            this.radioButtonResp1.Checked = true;
-            this.radioButtonResp1.Location = new System.Drawing.Point(6, 41);
-            this.radioButtonResp1.Name = "radioButtonResp1";
-            this.radioButtonResp1.Size = new System.Drawing.Size(90, 27);
-            this.radioButtonResp1.TabIndex = 0;
-            this.radioButtonResp1.TabStop = true;
-            this.radioButtonResp1.Text = "Correcta";
-            this.radioButtonResp1.UseVisualStyleBackColor = true;
+            this.radioButtonResp3.AutoSize = true;
+            this.radioButtonResp3.Location = new System.Drawing.Point(6, 295);
+            this.radioButtonResp3.Name = "radioButtonResp3";
+            this.radioButtonResp3.Size = new System.Drawing.Size(90, 27);
+            this.radioButtonResp3.TabIndex = 2;
+            this.radioButtonResp3.TabStop = true;
+            this.radioButtonResp3.Text = "Correcta";
+            this.radioButtonResp3.UseVisualStyleBackColor = true;
             // 
             // radioButtonResp2
             // 
@@ -206,16 +205,17 @@
             this.radioButtonResp2.Text = "Correcta";
             this.radioButtonResp2.UseVisualStyleBackColor = true;
             // 
-            // radioButtonResp3
+            // radioButtonResp1
             // 
-            this.radioButtonResp3.AutoSize = true;
-            this.radioButtonResp3.Location = new System.Drawing.Point(6, 295);
-            this.radioButtonResp3.Name = "radioButtonResp3";
-            this.radioButtonResp3.Size = new System.Drawing.Size(90, 27);
-            this.radioButtonResp3.TabIndex = 2;
-            this.radioButtonResp3.TabStop = true;
-            this.radioButtonResp3.Text = "Correcta";
-            this.radioButtonResp3.UseVisualStyleBackColor = true;
+            this.radioButtonResp1.AutoSize = true;
+            this.radioButtonResp1.Checked = true;
+            this.radioButtonResp1.Location = new System.Drawing.Point(6, 41);
+            this.radioButtonResp1.Name = "radioButtonResp1";
+            this.radioButtonResp1.Size = new System.Drawing.Size(90, 27);
+            this.radioButtonResp1.TabIndex = 0;
+            this.radioButtonResp1.TabStop = true;
+            this.radioButtonResp1.Text = "Correcta";
+            this.radioButtonResp1.UseVisualStyleBackColor = true;
             // 
             // labelId
             // 
@@ -234,6 +234,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Insertar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InsertarPregunta
             // 
@@ -242,10 +243,10 @@
             this.ClientSize = new System.Drawing.Size(565, 866);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelId);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.groupBoxRespuestas);
+            this.Controls.Add(this.textBoxResp3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxResp2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxResp1);
             this.Controls.Add(this.label5);
@@ -258,8 +259,8 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "InsertarPregunta";
             this.Text = "Insertar pregunta";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxRespuestas.ResumeLayout(false);
+            this.groupBoxRespuestas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,10 +279,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxResp1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxResp2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxResp3;
+        private System.Windows.Forms.GroupBox groupBoxRespuestas;
         private System.Windows.Forms.RadioButton radioButtonResp3;
         private System.Windows.Forms.RadioButton radioButtonResp2;
         private System.Windows.Forms.RadioButton radioButtonResp1;
