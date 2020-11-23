@@ -114,5 +114,10 @@ namespace EduJoc_CepSoft
             GuardarPreguntas(preguntas_ca, PREGUNTAS_JSON_CA);
             GuardarPreguntas(preguntas_en, PREGUNTAS_JSON_EN);
         }
+
+        private void cmbFiltrarIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

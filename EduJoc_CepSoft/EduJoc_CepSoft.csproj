@@ -111,5 +111,6 @@
   <ItemGroup>
     <Content Include="EcoArtsLogo.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

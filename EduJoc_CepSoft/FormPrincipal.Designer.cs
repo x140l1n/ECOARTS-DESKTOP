@@ -142,7 +142,7 @@ namespace EduJoc_CepSoft
             // 
             // gbFiltrar
             // 
-            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbFiltrar.Controls.Add(this.btnBuscar);
             this.gbFiltrar.Controls.Add(this.cmbFiltrarTema);
@@ -176,7 +176,7 @@ namespace EduJoc_CepSoft
             this.cmbFiltrarTema.FormattingEnabled = true;
             this.cmbFiltrarTema.Location = new System.Drawing.Point(409, 21);
             this.cmbFiltrarTema.Name = "cmbFiltrarTema";
-            this.cmbFiltrarTema.Size = new System.Drawing.Size(121, 25);
+            this.cmbFiltrarTema.Size = new System.Drawing.Size(121, 30);
             this.cmbFiltrarTema.TabIndex = 3;
             // 
             // cmbFiltrarIdioma
@@ -191,12 +191,13 @@ namespace EduJoc_CepSoft
             "Inglés"});
             this.cmbFiltrarIdioma.Location = new System.Drawing.Point(282, 21);
             this.cmbFiltrarIdioma.Name = "cmbFiltrarIdioma";
-            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(121, 25);
+            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(121, 30);
             this.cmbFiltrarIdioma.TabIndex = 2;
+            this.cmbFiltrarIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarIdioma_SelectedIndexChanged);
             // 
             // panelTbBuscar
             // 
-            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTbBuscar.BackColor = System.Drawing.Color.White;
             this.panelTbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -219,20 +220,20 @@ namespace EduJoc_CepSoft
             // 
             // tbFiltrarPregunta
             // 
-            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFiltrarPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFiltrarPregunta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltrarPregunta.Location = new System.Drawing.Point(28, 3);
             this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
-            this.tbFiltrarPregunta.Size = new System.Drawing.Size(237, 18);
+            this.tbFiltrarPregunta.Size = new System.Drawing.Size(237, 22);
             this.tbFiltrarPregunta.TabIndex = 1;
             // 
             // dgvPreguntas
             // 
             this.dgvPreguntas.AllowUserToAddRows = false;
-            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
@@ -251,6 +252,7 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.EnableHeadersVisualStyles = false;
             this.dgvPreguntas.Location = new System.Drawing.Point(12, 112);
             this.dgvPreguntas.Name = "dgvPreguntas";
+            this.dgvPreguntas.RowHeadersWidth = 51;
             this.dgvPreguntas.Size = new System.Drawing.Size(759, 434);
             this.dgvPreguntas.TabIndex = 2;
             // 
@@ -259,6 +261,7 @@ namespace EduJoc_CepSoft
             this.columnId.DataPropertyName = "id";
             this.columnId.Frozen = true;
             this.columnId.HeaderText = "#";
+            this.columnId.MinimumWidth = 6;
             this.columnId.Name = "columnId";
             this.columnId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.columnId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -268,18 +271,21 @@ namespace EduJoc_CepSoft
             // 
             this.columnTema.DataPropertyName = "tema";
             this.columnTema.HeaderText = "Tema";
+            this.columnTema.MinimumWidth = 6;
             this.columnTema.Name = "columnTema";
+            this.columnTema.Width = 125;
             // 
             // columnPregunta
             // 
             this.columnPregunta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.columnPregunta.DataPropertyName = "pregunta";
             this.columnPregunta.HeaderText = "Pregunta";
+            this.columnPregunta.MinimumWidth = 6;
             this.columnPregunta.Name = "columnPregunta";
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 558);
             this.Controls.Add(this.dgvPreguntas);
