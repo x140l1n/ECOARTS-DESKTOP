@@ -114,6 +114,10 @@ namespace EduJoc_CepSoft
             GuardarPreguntas(preguntas_en, PREGUNTAS_JSON_EN);
         }
 
-
+        private void btnAnadir_Click(object sender, EventArgs e)
+        {
+            InsertarPregunta nuevaPregunta = new InsertarPregunta(preguntas_es, preguntas_ca, preguntas_en);
+            nuevaPregunta.ShowDialog();
+        }
     }
 }

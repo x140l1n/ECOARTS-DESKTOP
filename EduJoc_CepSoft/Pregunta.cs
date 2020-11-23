@@ -10,11 +10,12 @@ namespace EduJoc_CepSoft
         public string pregunta { set; get; }
 
         List<Respuesta> respuestas = new List<Respuesta>();
-        public Pregunta(int id, string tema, string pregunta)
+        public Pregunta(int id, string tema, string pregunta, List<Respuesta> respuestas)
         {
             this.id = id;
             this.tema = tema ?? throw new ArgumentNullException(nameof(tema));
             this.pregunta = pregunta ?? throw new ArgumentNullException(nameof(pregunta));
+            this.respuestas = respuestas;
         }
 
         /// <summary>
