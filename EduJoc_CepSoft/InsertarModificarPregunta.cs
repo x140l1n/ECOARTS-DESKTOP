@@ -242,5 +242,15 @@ namespace EduJoc_CepSoft
             lblError.Text = missatge.ToUpper();
             comboBox.Focus();
         }
+
+        private void InsertarModificarPregunta_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void cmbTema_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,7 +52,7 @@
             this.tbtTema.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbtTema.Name = "tbtTema";
             this.tbtTema.ReadOnly = true;
-            this.tbtTema.Size = new System.Drawing.Size(221, 25);
+            this.tbtTema.Size = new System.Drawing.Size(221, 29);
             this.tbtTema.TabIndex = 0;
             this.tbtTema.Text = "Tema";
             // 
@@ -62,7 +62,7 @@
             this.tbtIdioma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbtIdioma.Name = "tbtIdioma";
             this.tbtIdioma.ReadOnly = true;
-            this.tbtIdioma.Size = new System.Drawing.Size(221, 25);
+            this.tbtIdioma.Size = new System.Drawing.Size(221, 29);
             this.tbtIdioma.TabIndex = 1;
             this.tbtIdioma.Text = "Idioma";
             // 
@@ -82,7 +82,7 @@
             this.lblResp1.AutoSize = true;
             this.lblResp1.Location = new System.Drawing.Point(470, 26);
             this.lblResp1.Name = "lblResp1";
-            this.lblResp1.Size = new System.Drawing.Size(95, 17);
+            this.lblResp1.Size = new System.Drawing.Size(123, 22);
             this.lblResp1.TabIndex = 3;
             this.lblResp1.Text = "Respuesta 1:";
             // 
@@ -100,7 +100,7 @@
             this.lblResp2.AutoSize = true;
             this.lblResp2.Location = new System.Drawing.Point(467, 130);
             this.lblResp2.Name = "lblResp2";
-            this.lblResp2.Size = new System.Drawing.Size(95, 17);
+            this.lblResp2.Size = new System.Drawing.Size(123, 22);
             this.lblResp2.TabIndex = 5;
             this.lblResp2.Text = "Respuesta 2:";
             // 
@@ -109,7 +109,7 @@
             this.lblResp3.AutoSize = true;
             this.lblResp3.Location = new System.Drawing.Point(470, 238);
             this.lblResp3.Name = "lblResp3";
-            this.lblResp3.Size = new System.Drawing.Size(95, 17);
+            this.lblResp3.Size = new System.Drawing.Size(123, 22);
             this.lblResp3.TabIndex = 6;
             this.lblResp3.Text = "Respuesta 3:";
             // 
@@ -147,7 +147,7 @@
             this.radioButtonResp3.AutoSize = true;
             this.radioButtonResp3.Location = new System.Drawing.Point(4, 241);
             this.radioButtonResp3.Name = "radioButtonResp3";
-            this.radioButtonResp3.Size = new System.Drawing.Size(83, 21);
+            this.radioButtonResp3.Size = new System.Drawing.Size(104, 26);
             this.radioButtonResp3.TabIndex = 2;
             this.radioButtonResp3.Text = "Correcta";
             this.radioButtonResp3.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             this.radioButtonResp2.AutoSize = true;
             this.radioButtonResp2.Location = new System.Drawing.Point(4, 133);
             this.radioButtonResp2.Name = "radioButtonResp2";
-            this.radioButtonResp2.Size = new System.Drawing.Size(83, 21);
+            this.radioButtonResp2.Size = new System.Drawing.Size(104, 26);
             this.radioButtonResp2.TabIndex = 1;
             this.radioButtonResp2.Text = "Correcta";
             this.radioButtonResp2.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@
             this.radioButtonResp1.Checked = true;
             this.radioButtonResp1.Location = new System.Drawing.Point(4, 26);
             this.radioButtonResp1.Name = "radioButtonResp1";
-            this.radioButtonResp1.Size = new System.Drawing.Size(83, 21);
+            this.radioButtonResp1.Size = new System.Drawing.Size(104, 26);
             this.radioButtonResp1.TabIndex = 0;
             this.radioButtonResp1.TabStop = true;
             this.radioButtonResp1.Text = "Correcta";
@@ -179,13 +179,13 @@
             this.labelId.AutoSize = true;
             this.labelId.Location = new System.Drawing.Point(775, -22);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(57, 17);
+            this.labelId.Size = new System.Drawing.Size(78, 22);
             this.labelId.TabIndex = 10;
             this.labelId.Text = "#labelId";
             // 
             // VerRespuestas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 329);
             this.Controls.Add(this.labelId);
@@ -205,6 +205,7 @@
             this.Name = "VerRespuestas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver respuestas";
+            this.Load += new System.EventHandler(this.VerRespuestas_Load);
             this.grpBoxRespuestas.ResumeLayout(false);
             this.grpBoxRespuestas.PerformLayout();
             this.ResumeLayout(false);
