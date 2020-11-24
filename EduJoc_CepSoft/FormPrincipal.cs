@@ -99,8 +99,8 @@ namespace EduJoc_CepSoft
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
-            string idioma = cmbFiltrarIdioma.SelectedText;
-            string tema = cmbFiltrarTema.SelectedText;
+            string idioma = cmbFiltrarIdioma.Text;
+            string tema = cmbFiltrarTema.Text;
 
             BindingList<Pregunta> preguntasFiltrada = null;
 
@@ -117,12 +117,20 @@ namespace EduJoc_CepSoft
                     break;
             }
 
+            //Ordenar las preguntas por el id.
+            preguntasFiltrada = new BindingList<Pregunta>(preguntasFiltrada.OrderBy(p => p.id).ToList());
+
             dgvPreguntas.DataSource = preguntasFiltrada;
             dgvPreguntas.ClearSelection();
         }
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //Ordenar las preguntas por el id.
+            preguntas_es = new BindingList<Pregunta>(preguntas_es.OrderBy(p => p.id).ToList());
+            preguntas_ca = new BindingList<Pregunta>(preguntas_ca.OrderBy(p => p.id).ToList());
+            preguntas_en = new BindingList<Pregunta>(preguntas_en.OrderBy(p => p.id).ToList());
+
             GuardarPreguntas(preguntas_es, PREGUNTAS_JSON_ES);
             GuardarPreguntas(preguntas_ca, PREGUNTAS_JSON_CA);
             GuardarPreguntas(preguntas_en, PREGUNTAS_JSON_EN);
@@ -136,9 +144,9 @@ namespace EduJoc_CepSoft
 
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
-            if (dgvPreguntas.SelectedRows.Count > 0)
+            if (dgvPreguntas.SelectedCells.Count > 0)
             {
-                Pregunta preguntaSeleccionada = (Pregunta)dgvPreguntas.CurrentRow.DataBoundItem;
+                Pregunta preguntaSeleccionada = (Pregunta)dgvPreguntas.Rows[dgvPreguntas.SelectedCells[0].RowIndex].DataBoundItem;
 
                 InsertarModificarPregunta modificarPregunta = new InsertarModificarPregunta(preguntaSeleccionada, preguntas_es, preguntas_ca, preguntas_en);
                 modificarPregunta.ShowDialog();
@@ -147,11 +155,37 @@ namespace EduJoc_CepSoft
 
         private void btnEliminar_Click(object sender, System.EventArgs e)
         {
+            if (dgvPreguntas.SelectedCells.Count > 0)
+            {
+                Pregunta preguntaSeleccionada = (Pregunta)dgvPreguntas.Rows[dgvPreguntas.SelectedCells[0].RowIndex].DataBoundItem;
 
+                DialogResult opcion = MessageBox.Show("¿Estás seguro que quieres eliminar la pregunta?", "Eliminar pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (opcion == DialogResult.Yes)
+                {
+                    switch (preguntaSeleccionada.idioma)
+                    {
+                        case "Castellano":
+                            preguntas_es.Remove(preguntaSeleccionada);
+                            break;
+                        case "Català":
+                            preguntas_ca.Remove(preguntaSeleccionada);
+                            break;
+                        case "English":
+                            preguntas_en.Remove(preguntaSeleccionada);
+                            break;
+                    }
+                }
+            }
         }
 
         private void btnGuardar_Click(object sender, System.EventArgs e)
         {
+            //Ordenar las preguntas por el id.
+            preguntas_es = new BindingList<Pregunta>(preguntas_es.OrderBy(p => p.id).ToList());
+            preguntas_ca = new BindingList<Pregunta>(preguntas_ca.OrderBy(p => p.id).ToList());
+            preguntas_en = new BindingList<Pregunta>(preguntas_en.OrderBy(p => p.id).ToList());
+
             GuardarPreguntas(preguntas_es, PREGUNTAS_JSON_ES);
             GuardarPreguntas(preguntas_ca, PREGUNTAS_JSON_CA);
             GuardarPreguntas(preguntas_en, PREGUNTAS_JSON_EN);
@@ -162,6 +196,14 @@ namespace EduJoc_CepSoft
         private void btnSalir_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvPreguntas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Pregunta pregunta = (Pregunta)dgvPreguntas.Rows[e.RowIndex].DataBoundItem;
+
+            VerRespuestas verRespuestas = new VerRespuestas(pregunta);
+            verRespuestas.ShowDialog();
         }
     }
 }

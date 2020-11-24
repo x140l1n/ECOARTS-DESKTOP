@@ -14,12 +14,13 @@ namespace EduJoc_CepSoft
 
         private void VerRespuestas_Load(object sender, System.EventArgs e)
         {
+            lblId.Text = "#" + pregunta.id;
             tbtTema.Text = pregunta.tema;
             tbtIdioma.Text = pregunta.idioma;
             tbtPregunta.Text = pregunta.pregunta;
-            tbtResp1.Text = pregunta.respuestas[0].ToString();
-            tbtResp2.Text = pregunta.respuestas[1].ToString();
-            tbtResp3.Text = pregunta.respuestas[2].ToString();
+            tbtResp1.Text = pregunta.respuestas[0].respuesta;
+            tbtResp2.Text = pregunta.respuestas[1].respuesta;
+            tbtResp3.Text = pregunta.respuestas[2].respuesta;
 
             for (int i = 0; i < pregunta.respuestas.Count; i++)
             {

@@ -147,7 +147,7 @@ namespace EduJoc_CepSoft
             // 
             // gbFiltrar
             // 
-            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbFiltrar.Controls.Add(this.btnBuscar);
             this.gbFiltrar.Controls.Add(this.cmbFiltrarTema);
@@ -202,7 +202,7 @@ namespace EduJoc_CepSoft
             // 
             // panelTbBuscar
             // 
-            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTbBuscar.BackColor = System.Drawing.Color.White;
             this.panelTbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -227,7 +227,7 @@ namespace EduJoc_CepSoft
             // 
             // tbFiltrarPregunta
             // 
-            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFiltrarPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFiltrarPregunta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,8 +240,9 @@ namespace EduJoc_CepSoft
             // dgvPreguntas
             // 
             this.dgvPreguntas.AllowUserToAddRows = false;
-            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvPreguntas.AllowUserToDeleteRows = false;
+            this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
@@ -265,9 +266,10 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.Name = "dgvPreguntas";
             this.dgvPreguntas.ReadOnly = true;
             this.dgvPreguntas.RowHeadersWidth = 51;
-            this.dgvPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPreguntas.Size = new System.Drawing.Size(885, 593);
             this.dgvPreguntas.TabIndex = 2;
+            this.dgvPreguntas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreguntas_CellContentDoubleClick);
             // 
             // columnId
             // 
