@@ -4,8 +4,8 @@ namespace EduJoc_CepSoft
 {
     public partial class VerRespuestas : Form
     {
-        Pregunta pregunta;
-        int posicion;
+        private Pregunta pregunta;
+
         public VerRespuestas(Pregunta pregunta)
         {
             InitializeComponent();
@@ -26,7 +26,6 @@ namespace EduJoc_CepSoft
                 if (pregunta.respuestas[i].correcta == true)
                 {
                     grpBoxRespuestas.Controls[i].Select();
-
                 }
             }
         }
