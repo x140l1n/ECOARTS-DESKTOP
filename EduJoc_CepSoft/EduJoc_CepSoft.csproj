@@ -61,11 +61,11 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsertarPregunta.cs">
+    <Compile Include="InsertarModificarPregunta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsertarPregunta.Designer.cs">
-      <DependentUpon>InsertarPregunta.cs</DependentUpon>
+    <Compile Include="InsertarModificarPregunta.Designer.cs">
+      <DependentUpon>InsertarModificarPregunta.cs</DependentUpon>
     </Compile>
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
@@ -80,8 +80,8 @@
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsertarPregunta.resx">
-      <DependentUpon>InsertarPregunta.cs</DependentUpon>
+    <EmbeddedResource Include="InsertarModificarPregunta.resx">
+      <DependentUpon>InsertarModificarPregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

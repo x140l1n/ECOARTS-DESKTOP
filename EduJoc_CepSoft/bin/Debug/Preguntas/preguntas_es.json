@@ -1,1 +1,1 @@
-[{"id":1,"tema":"Agua","pregunta":"¿Probando castellano?"},{"id":2,"tema":"Plástico","pregunta":"pregunta en castellano"},{"id":3,"tema":"Bosque","pregunta":"Nova proba castellà"}]
+[{"id":1,"tema":"Bosque","idioma":"Castellano","pregunta":"¿Test castellano?","respuestas":[{"respuesta":"Resp1","correcta":false},{"respuesta":"Resp2","correcta":false},{"respuesta":"Resp3","correcta":true}]}]

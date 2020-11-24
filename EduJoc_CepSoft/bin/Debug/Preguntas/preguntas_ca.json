@@ -1,1 +1,1 @@
-[{"id":1,"tema":"Agua","pregunta":"Provant?"},{"id":2,"tema":"","pregunta":"primera preguta en catala opcio correcte 2"},{"id":3,"tema":"Agua","pregunta":"sadasd"}]
+[{"id":1,"tema":"Agua","idioma":"Català","pregunta":"¿Test catalán?","respuestas":[{"respuesta":"respuesta 1","correcta":false},{"respuesta":"respuesta 2","correcta":true},{"respuesta":"respuesta 3","correcta":false}]}]

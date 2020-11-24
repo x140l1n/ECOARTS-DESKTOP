@@ -16,9 +16,7 @@ E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarPregunta.resources
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
@@ -39,3 +37,5 @@ D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
