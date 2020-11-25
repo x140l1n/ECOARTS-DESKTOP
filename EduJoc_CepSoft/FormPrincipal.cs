@@ -116,14 +116,12 @@ namespace EduJoc_CepSoft
                     preguntasFiltrada = new BindingList<Pregunta>(preguntas_en.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text) && p.tema.Contains(tema)).ToList<Pregunta>());
                     break;
             }
-<<<<<<< HEAD
-            //dgvPreguntas.DataSource = null;
-=======
+
 
             //Ordenar las preguntas por el id.
             preguntasFiltrada = new BindingList<Pregunta>(preguntasFiltrada.OrderBy(p => p.id).ToList());
 
->>>>>>> 142a9061a2994949d13f26f847ec941ffdce02fb
+
             dgvPreguntas.DataSource = preguntasFiltrada;
     
         }
@@ -201,26 +199,7 @@ namespace EduJoc_CepSoft
         {
             this.Close();
         }
-<<<<<<< HEAD
-        
-        private void dgvPreguntas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-           string idioma = dgvPreguntas.CurrentRow.Cells[2].Value.ToString();
-            if (idioma.Equals("Castellano"))
-            {
-                int posicio = dgvPreguntas.CurrentRow.Index;
-                Pregunta pregunta = preguntas_es[posicio];
-                VerRespuestas ver = new VerRespuestas (pregunta);
-                ver.ShowDialog();
-            }else if (idioma.Equals("Català")){
-                int posicio = dgvPreguntas.CurrentRow.Index;
-                Pregunta pregunta = preguntas_ca[posicio];
-                VerRespuestas ver = new VerRespuestas(pregunta);
-                ver.ShowDialog();
-            }else if (idioma.Equals("English")){
 
-            }
-=======
 
         private void dgvPreguntas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -228,7 +207,7 @@ namespace EduJoc_CepSoft
 
             VerRespuestas verRespuestas = new VerRespuestas(pregunta);
             verRespuestas.ShowDialog();
->>>>>>> 142a9061a2994949d13f26f847ec941ffdce02fb
+
         }
     }
 }
