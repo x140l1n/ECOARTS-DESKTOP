@@ -47,7 +47,7 @@
             this.cmbFiltrarIdioma = new System.Windows.Forms.ComboBox();
             this.panelTbBuscar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbFiltrarPregunta = new System.Windows.Forms.TextBox();
+            this.tbFiltrarPersonaje = new System.Windows.Forms.TextBox();
             this.toolStripPersonajes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).BeginInit();
             this.gbFiltrar.SuspendLayout();
@@ -81,6 +81,7 @@
             this.toolStripButtonAdd.Name = "toolStripButtonAdd";
             this.toolStripButtonAdd.Size = new System.Drawing.Size(34, 34);
             this.toolStripButtonAdd.Text = "Añadir Personaje";
+            this.toolStripButtonAdd.Click += new System.EventHandler(this.toolStripButtonAdd_Click);
             // 
             // toolStripButtonEdit
             // 
@@ -91,6 +92,7 @@
             this.toolStripButtonEdit.Name = "toolStripButtonEdit";
             this.toolStripButtonEdit.Size = new System.Drawing.Size(34, 34);
             this.toolStripButtonEdit.Text = "Modificar Personaje";
+            this.toolStripButtonEdit.Click += new System.EventHandler(this.toolStripButtonEdit_Click);
             // 
             // toolStripButtonDelete
             // 
@@ -101,6 +103,7 @@
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
             this.toolStripButtonDelete.Size = new System.Drawing.Size(34, 34);
             this.toolStripButtonDelete.Text = "Eliminar ";
+            this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
             // toolStripButtonSave
             // 
@@ -111,6 +114,7 @@
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(34, 34);
             this.toolStripButtonSave.Text = "Guardar";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripSeparator
             // 
@@ -127,6 +131,7 @@
             this.toolStripButtonExit.Name = "toolStripButtonExit";
             this.toolStripButtonExit.Size = new System.Drawing.Size(34, 34);
             this.toolStripButtonExit.Text = "Salir";
+            this.toolStripButtonExit.Click += new System.EventHandler(this.toolStripButtonExit_Click);
             // 
             // dgvPersonajes
             // 
@@ -211,6 +216,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbFiltrarIdioma
             // 
@@ -231,7 +237,7 @@
             this.panelTbBuscar.BackColor = System.Drawing.Color.White;
             this.panelTbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTbBuscar.Controls.Add(this.pictureBox1);
-            this.panelTbBuscar.Controls.Add(this.tbFiltrarPregunta);
+            this.panelTbBuscar.Controls.Add(this.tbFiltrarPersonaje);
             this.panelTbBuscar.Location = new System.Drawing.Point(7, 26);
             this.panelTbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.panelTbBuscar.Name = "panelTbBuscar";
@@ -249,17 +255,17 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // tbFiltrarPregunta
+            // tbFiltrarPersonaje
             // 
-            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbFiltrarPersonaje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFiltrarPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFiltrarPregunta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFiltrarPregunta.Location = new System.Drawing.Point(31, 3);
-            this.tbFiltrarPregunta.Margin = new System.Windows.Forms.Padding(4);
-            this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
-            this.tbFiltrarPregunta.Size = new System.Drawing.Size(308, 18);
-            this.tbFiltrarPregunta.TabIndex = 1;
+            this.tbFiltrarPersonaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFiltrarPersonaje.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFiltrarPersonaje.Location = new System.Drawing.Point(31, 3);
+            this.tbFiltrarPersonaje.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFiltrarPersonaje.Name = "tbFiltrarPersonaje";
+            this.tbFiltrarPersonaje.Size = new System.Drawing.Size(308, 18);
+            this.tbFiltrarPersonaje.TabIndex = 1;
             // 
             // GestionarPersonajes
             // 
@@ -274,6 +280,8 @@
             this.Name = "GestionarPersonajes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar Personajes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GestionarPersonajes_FormClosing);
+            this.Load += new System.EventHandler(this.GestionarPersonajes_Load);
             this.toolStripPersonajes.ResumeLayout(false);
             this.toolStripPersonajes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).EndInit();
@@ -303,6 +311,6 @@
         private System.Windows.Forms.ComboBox cmbFiltrarIdioma;
         private System.Windows.Forms.Panel panelTbBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox tbFiltrarPregunta;
+        private System.Windows.Forms.TextBox tbFiltrarPersonaje;
     }
 }

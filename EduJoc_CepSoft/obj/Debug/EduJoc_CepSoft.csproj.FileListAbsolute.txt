@@ -10,7 +10,7 @@ E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte E
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache

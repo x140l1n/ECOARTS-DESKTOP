@@ -79,6 +79,7 @@
     <Compile Include="InsertarModificarPregunta.Designer.cs">
       <DependentUpon>InsertarModificarPregunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personaje.cs" />
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

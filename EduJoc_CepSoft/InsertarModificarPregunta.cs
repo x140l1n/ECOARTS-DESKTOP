@@ -152,7 +152,7 @@ namespace EduJoc_CepSoft
 
         private void insertarPregunta()
         {
-            //Si todos los campos están rellenados, modificamos.
+            //Si todos los campos están rellenados, insertamos.
             if (comprobarCampos())
             {
                 pregunta = tbtPregunta.Text;
