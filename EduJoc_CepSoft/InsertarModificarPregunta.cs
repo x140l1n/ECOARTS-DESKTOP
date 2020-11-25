@@ -88,13 +88,29 @@ namespace EduJoc_CepSoft
             tbtResp2.Text = preguntaModificar.respuestas[1].respuesta;
             tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
 
+            
+            
             //Radiobuttons.
-            for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
+           /* for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
             {
                 if (preguntaModificar.respuestas[i].correcta == true)
                 {
-                    grpBoxRespuestas.Controls[i].Select();
+                   // grpBoxRespuestas.Controls[i].Select();
+                    RadioButton rdbton = (RadioButton)grpBoxRespuestas.Controls[i];
+                    rdbton.Checked = true;
                 }
+            }*/
+
+            if(preguntaModificar.respuestas[0].correcta == true)
+            {
+                rdbtnResp1.Checked = true;
+            }else if (preguntaModificar.respuestas[1].correcta == true)
+            {
+                rdbtnResp2.Checked = true;
+            }
+            else
+            {
+                rdbtnResp3.Checked = true;
             }
 
             this.Text = "Modificar pregunta";
@@ -213,6 +229,10 @@ namespace EduJoc_CepSoft
                 preguntaModificar.respuestas[1].respuesta = tbtResp2.Text;
                 preguntaModificar.respuestas[2].respuesta = tbtResp3.Text;
 
+                rdbtnResp1.Checked = false;
+                rdbtnResp2.Checked = false;
+                rdbtnResp3.Checked = false;
+
                 if (rdbtnResp1.Checked) correcta1 = true;
                 else if (rdbtnResp2.Checked) correcta2 = true;
                 else correcta3 = true;
@@ -296,6 +316,11 @@ namespace EduJoc_CepSoft
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
             comboBox.Focus();
+        }
+
+        private void InsertarModificarPregunta_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
