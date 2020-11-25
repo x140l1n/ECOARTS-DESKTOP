@@ -129,6 +129,7 @@ namespace EduJoc_CepSoft
             this.btnPersonajes.Name = "btnPersonajes";
             this.btnPersonajes.Size = new System.Drawing.Size(34, 34);
             this.btnPersonajes.Text = "Gestionar personajes";
+            this.btnPersonajes.Click += new System.EventHandler(this.btnPersonajes_Click);
             // 
             // toolStripSeparator2
             // 
@@ -185,7 +186,7 @@ namespace EduJoc_CepSoft
             this.cmbFiltrarTema.Location = new System.Drawing.Point(477, 27);
             this.cmbFiltrarTema.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFiltrarTema.Name = "cmbFiltrarTema";
-            this.cmbFiltrarTema.Size = new System.Drawing.Size(140, 30);
+            this.cmbFiltrarTema.Size = new System.Drawing.Size(140, 25);
             this.cmbFiltrarTema.TabIndex = 3;
             // 
             // cmbFiltrarIdioma
@@ -197,7 +198,7 @@ namespace EduJoc_CepSoft
             this.cmbFiltrarIdioma.Location = new System.Drawing.Point(329, 27);
             this.cmbFiltrarIdioma.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFiltrarIdioma.Name = "cmbFiltrarIdioma";
-            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(140, 30);
+            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(140, 25);
             this.cmbFiltrarIdioma.TabIndex = 2;
             // 
             // panelTbBuscar
@@ -234,15 +235,13 @@ namespace EduJoc_CepSoft
             this.tbFiltrarPregunta.Location = new System.Drawing.Point(31, 3);
             this.tbFiltrarPregunta.Margin = new System.Windows.Forms.Padding(4);
             this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
-            this.tbFiltrarPregunta.Size = new System.Drawing.Size(276, 22);
+            this.tbFiltrarPregunta.Size = new System.Drawing.Size(276, 18);
             this.tbFiltrarPregunta.TabIndex = 1;
             // 
             // dgvPreguntas
             // 
             this.dgvPreguntas.AllowUserToAddRows = false;
-
             this.dgvPreguntas.AllowUserToDeleteRows = false;
-
             this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -271,9 +270,7 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPreguntas.Size = new System.Drawing.Size(885, 593);
             this.dgvPreguntas.TabIndex = 2;
-
-            this.dgvPreguntas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreguntas_CellContentDoubleClick);
-
+            this.dgvPreguntas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreguntas_CellDoubleClick);
             // 
             // columnId
             // 
@@ -316,7 +313,7 @@ namespace EduJoc_CepSoft
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 730);
             this.Controls.Add(this.dgvPreguntas);

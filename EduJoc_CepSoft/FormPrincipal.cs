@@ -99,6 +99,11 @@ namespace EduJoc_CepSoft
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
+            buscar();
+        }
+
+        private void buscar()
+        {
             string idioma = cmbFiltrarIdioma.Text;
             string tema = cmbFiltrarTema.Text;
 
@@ -117,13 +122,11 @@ namespace EduJoc_CepSoft
                     break;
             }
 
-
             //Ordenar las preguntas por el id.
             preguntasFiltrada = new BindingList<Pregunta>(preguntasFiltrada.OrderBy(p => p.id).ToList());
 
-
             dgvPreguntas.DataSource = preguntasFiltrada;
-    
+            dgvPreguntas.ClearSelection();
         }
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -142,6 +145,8 @@ namespace EduJoc_CepSoft
         {
             InsertarModificarPregunta nuevaPregunta = new InsertarModificarPregunta(preguntas_es, preguntas_ca, preguntas_en);
             nuevaPregunta.ShowDialog();
+
+            buscar();
         }
 
         private void btnEditar_Click(object sender, System.EventArgs e)
@@ -150,8 +155,10 @@ namespace EduJoc_CepSoft
             {
                 Pregunta preguntaSeleccionada = (Pregunta)dgvPreguntas.Rows[dgvPreguntas.SelectedCells[0].RowIndex].DataBoundItem;
 
-                InsertarModificarPregunta modificarPregunta = new InsertarModificarPregunta(preguntaSeleccionada, preguntas_es, preguntas_ca, preguntas_en);
+                InsertarModificarPregunta modificarPregunta = new InsertarModificarPregunta(preguntaSeleccionada);
                 modificarPregunta.ShowDialog();
+
+                buscar();
             }
         }
 
@@ -201,13 +208,22 @@ namespace EduJoc_CepSoft
         }
 
 
-        private void dgvPreguntas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgvPreguntas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Pregunta pregunta = (Pregunta)dgvPreguntas.Rows[e.RowIndex].DataBoundItem;
+            if (e.RowIndex >= 0)
+            {
+                Pregunta pregunta = (Pregunta)dgvPreguntas.Rows[e.RowIndex].DataBoundItem;
 
-            VerRespuestas verRespuestas = new VerRespuestas(pregunta);
-            verRespuestas.ShowDialog();
+                VerRespuestas verRespuestas = new VerRespuestas(pregunta);
+                verRespuestas.ShowDialog();
+            }
+        }
 
+        private void btnPersonajes_Click(object sender, System.EventArgs e)
+        {
+            GestionarPersonajes gestionarPersonaje = new GestionarPersonajes();
+            gestionarPersonaje.ShowDialog();
         }
     }
 }

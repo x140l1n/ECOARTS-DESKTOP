@@ -42,8 +42,17 @@
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbFiltrar = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmbFiltrarIdioma = new System.Windows.Forms.ComboBox();
+            this.panelTbBuscar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbFiltrarPregunta = new System.Windows.Forms.TextBox();
             this.toolStripPersonajes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).BeginInit();
+            this.gbFiltrar.SuspendLayout();
+            this.panelTbBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripPersonajes
@@ -59,7 +68,7 @@
             this.toolStripButtonExit});
             this.toolStripPersonajes.Location = new System.Drawing.Point(0, 0);
             this.toolStripPersonajes.Name = "toolStripPersonajes";
-            this.toolStripPersonajes.Size = new System.Drawing.Size(491, 40);
+            this.toolStripPersonajes.Size = new System.Drawing.Size(625, 40);
             this.toolStripPersonajes.TabIndex = 2;
             this.toolStripPersonajes.Text = "toolStrip1";
             // 
@@ -147,10 +156,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPersonajes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersonajes.EnableHeadersVisualStyles = false;
-            this.dgvPersonajes.Location = new System.Drawing.Point(12, 40);
+            this.dgvPersonajes.Location = new System.Drawing.Point(12, 110);
             this.dgvPersonajes.Name = "dgvPersonajes";
             this.dgvPersonajes.ReadOnly = true;
-            this.dgvPersonajes.Size = new System.Drawing.Size(467, 318);
+            this.dgvPersonajes.Size = new System.Drawing.Size(601, 300);
             this.dgvPersonajes.TabIndex = 4;
             // 
             // ColumnId
@@ -174,11 +183,90 @@
             this.ColumnNombre.ReadOnly = true;
             this.ColumnNombre.Width = 141;
             // 
+            // gbFiltrar
+            // 
+            this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFiltrar.Controls.Add(this.btnBuscar);
+            this.gbFiltrar.Controls.Add(this.cmbFiltrarIdioma);
+            this.gbFiltrar.Controls.Add(this.panelTbBuscar);
+            this.gbFiltrar.Location = new System.Drawing.Point(5, 44);
+            this.gbFiltrar.Margin = new System.Windows.Forms.Padding(4);
+            this.gbFiltrar.Name = "gbFiltrar";
+            this.gbFiltrar.Padding = new System.Windows.Forms.Padding(4);
+            this.gbFiltrar.Size = new System.Drawing.Size(608, 59);
+            this.gbFiltrar.TabIndex = 5;
+            this.gbFiltrar.TabStop = false;
+            this.gbFiltrar.Text = "Filtrar";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBuscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(509, 22);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(91, 33);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // cmbFiltrarIdioma
+            // 
+            this.cmbFiltrarIdioma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltrarIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltrarIdioma.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltrarIdioma.FormattingEnabled = true;
+            this.cmbFiltrarIdioma.Location = new System.Drawing.Point(361, 26);
+            this.cmbFiltrarIdioma.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbFiltrarIdioma.Name = "cmbFiltrarIdioma";
+            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(140, 25);
+            this.cmbFiltrarIdioma.TabIndex = 2;
+            // 
+            // panelTbBuscar
+            // 
+            this.panelTbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTbBuscar.BackColor = System.Drawing.Color.White;
+            this.panelTbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTbBuscar.Controls.Add(this.pictureBox1);
+            this.panelTbBuscar.Controls.Add(this.tbFiltrarPregunta);
+            this.panelTbBuscar.Location = new System.Drawing.Point(7, 26);
+            this.panelTbBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTbBuscar.Name = "panelTbBuscar";
+            this.panelTbBuscar.Size = new System.Drawing.Size(346, 26);
+            this.panelTbBuscar.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tbFiltrarPregunta
+            // 
+            this.tbFiltrarPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbFiltrarPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFiltrarPregunta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFiltrarPregunta.Location = new System.Drawing.Point(31, 3);
+            this.tbFiltrarPregunta.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
+            this.tbFiltrarPregunta.Size = new System.Drawing.Size(308, 18);
+            this.tbFiltrarPregunta.TabIndex = 1;
+            // 
             // GestionarPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 370);
+            this.ClientSize = new System.Drawing.Size(625, 422);
+            this.Controls.Add(this.gbFiltrar);
             this.Controls.Add(this.dgvPersonajes);
             this.Controls.Add(this.toolStripPersonajes);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,6 +277,10 @@
             this.toolStripPersonajes.ResumeLayout(false);
             this.toolStripPersonajes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).EndInit();
+            this.gbFiltrar.ResumeLayout(false);
+            this.panelTbBuscar.ResumeLayout(false);
+            this.panelTbBuscar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +298,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnImagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
+        private System.Windows.Forms.GroupBox gbFiltrar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox cmbFiltrarIdioma;
+        private System.Windows.Forms.Panel panelTbBuscar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox tbFiltrarPregunta;
     }
 }

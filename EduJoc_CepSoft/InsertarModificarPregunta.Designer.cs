@@ -62,7 +62,7 @@
             this.lblTema.Location = new System.Drawing.Point(14, 16);
             this.lblTema.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(52, 17);
+            this.lblTema.Size = new System.Drawing.Size(67, 22);
             this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Tema: ";
             // 
@@ -73,20 +73,20 @@
             this.lblIdioma.Location = new System.Drawing.Point(239, 16);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(59, 17);
+            this.lblIdioma.Size = new System.Drawing.Size(78, 22);
             this.lblIdioma.TabIndex = 1;
             this.lblIdioma.Text = "Idioma: ";
             // 
             // cmbTema
             // 
-            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTema.FormattingEnabled = true;
             this.cmbTema.Location = new System.Drawing.Point(17, 36);
             this.cmbTema.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.cmbTema.Name = "cmbTema";
-            this.cmbTema.Size = new System.Drawing.Size(167, 25);
+            this.cmbTema.Size = new System.Drawing.Size(167, 30);
             this.cmbTema.TabIndex = 2;
             // 
             // cmbIdioma
@@ -97,7 +97,7 @@
             this.cmbIdioma.Location = new System.Drawing.Point(242, 36);
             this.cmbIdioma.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(162, 25);
+            this.cmbIdioma.Size = new System.Drawing.Size(162, 30);
             this.cmbIdioma.TabIndex = 3;
             // 
             // lblPregunta
@@ -106,17 +106,18 @@
             this.lblPregunta.Location = new System.Drawing.Point(14, 78);
             this.lblPregunta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(67, 17);
+            this.lblPregunta.Size = new System.Drawing.Size(86, 22);
             this.lblPregunta.TabIndex = 4;
             this.lblPregunta.Text = "Pregunta";
             // 
             // tbtPregunta
             // 
-            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtPregunta.Location = new System.Drawing.Point(17, 98);
             this.tbtPregunta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtPregunta.MaxLength = 150;
             this.tbtPregunta.Multiline = true;
             this.tbtPregunta.Name = "tbtPregunta";
             this.tbtPregunta.Size = new System.Drawing.Size(362, 124);
@@ -126,7 +127,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(17, 321);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
+            this.textBox1.Size = new System.Drawing.Size(212, 22);
             this.textBox1.TabIndex = 7;
             // 
             // lblRespuesta1
@@ -136,16 +137,17 @@
             this.lblRespuesta1.Location = new System.Drawing.Point(14, 240);
             this.lblRespuesta1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRespuesta1.Name = "lblRespuesta1";
-            this.lblRespuesta1.Size = new System.Drawing.Size(91, 17);
+            this.lblRespuesta1.Size = new System.Drawing.Size(118, 22);
             this.lblRespuesta1.TabIndex = 6;
             this.lblRespuesta1.Text = "Respuesta 1";
             // 
             // tbtResp1
             // 
-            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp1.Location = new System.Drawing.Point(17, 260);
             this.tbtResp1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp1.MaxLength = 50;
             this.tbtResp1.Multiline = true;
             this.tbtResp1.Name = "tbtResp1";
             this.tbtResp1.Size = new System.Drawing.Size(267, 62);
@@ -158,16 +160,17 @@
             this.lblRespuesta2.Location = new System.Drawing.Point(14, 341);
             this.lblRespuesta2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRespuesta2.Name = "lblRespuesta2";
-            this.lblRespuesta2.Size = new System.Drawing.Size(91, 17);
+            this.lblRespuesta2.Size = new System.Drawing.Size(118, 22);
             this.lblRespuesta2.TabIndex = 8;
             this.lblRespuesta2.Text = "Respuesta 2";
             // 
             // tbtResp2
             // 
-            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp2.Location = new System.Drawing.Point(17, 361);
             this.tbtResp2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp2.MaxLength = 50;
             this.tbtResp2.Multiline = true;
             this.tbtResp2.Name = "tbtResp2";
             this.tbtResp2.Size = new System.Drawing.Size(267, 62);
@@ -180,16 +183,17 @@
             this.lblRespuesta3.Location = new System.Drawing.Point(14, 440);
             this.lblRespuesta3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRespuesta3.Name = "lblRespuesta3";
-            this.lblRespuesta3.Size = new System.Drawing.Size(91, 17);
+            this.lblRespuesta3.Size = new System.Drawing.Size(118, 22);
             this.lblRespuesta3.TabIndex = 10;
             this.lblRespuesta3.Text = "Respuesta 3";
             // 
             // tbtResp3
             // 
-            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp3.Location = new System.Drawing.Point(17, 460);
             this.tbtResp3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp3.MaxLength = 50;
             this.tbtResp3.Multiline = true;
             this.tbtResp3.Name = "tbtResp3";
             this.tbtResp3.Size = new System.Drawing.Size(267, 62);
@@ -213,12 +217,11 @@
             // 
             this.rdbtnResp3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rdbtnResp3.AutoSize = true;
-            this.rdbtnResp3.Location = new System.Drawing.Point(5, 232);
+            this.rdbtnResp3.Location = new System.Drawing.Point(-16, 232);
             this.rdbtnResp3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdbtnResp3.Name = "rdbtnResp3";
-            this.rdbtnResp3.Size = new System.Drawing.Size(83, 21);
+            this.rdbtnResp3.Size = new System.Drawing.Size(104, 26);
             this.rdbtnResp3.TabIndex = 2;
-            this.rdbtnResp3.TabStop = true;
             this.rdbtnResp3.Text = "Correcta";
             this.rdbtnResp3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnResp3.UseVisualStyleBackColor = true;
@@ -227,12 +230,11 @@
             // 
             this.rdbtnResp2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rdbtnResp2.AutoSize = true;
-            this.rdbtnResp2.Location = new System.Drawing.Point(5, 131);
+            this.rdbtnResp2.Location = new System.Drawing.Point(-16, 131);
             this.rdbtnResp2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdbtnResp2.Name = "rdbtnResp2";
-            this.rdbtnResp2.Size = new System.Drawing.Size(83, 21);
+            this.rdbtnResp2.Size = new System.Drawing.Size(104, 26);
             this.rdbtnResp2.TabIndex = 1;
-            this.rdbtnResp2.TabStop = true;
             this.rdbtnResp2.Text = "Correcta";
             this.rdbtnResp2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnResp2.UseVisualStyleBackColor = true;
@@ -242,10 +244,10 @@
             this.rdbtnResp1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rdbtnResp1.AutoSize = true;
             this.rdbtnResp1.Checked = true;
-            this.rdbtnResp1.Location = new System.Drawing.Point(5, 30);
+            this.rdbtnResp1.Location = new System.Drawing.Point(-16, 30);
             this.rdbtnResp1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdbtnResp1.Name = "rdbtnResp1";
-            this.rdbtnResp1.Size = new System.Drawing.Size(83, 21);
+            this.rdbtnResp1.Size = new System.Drawing.Size(104, 26);
             this.rdbtnResp1.TabIndex = 0;
             this.rdbtnResp1.TabStop = true;
             this.rdbtnResp1.Text = "Correcta";
@@ -259,7 +261,7 @@
             this.lblId.Location = new System.Drawing.Point(14, 588);
             this.lblId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(0, 17);
+            this.lblId.Size = new System.Drawing.Size(0, 22);
             this.lblId.TabIndex = 13;
             // 
             // btnInsertarModificar
@@ -292,7 +294,7 @@
             // 
             // InsertarModificarPregunta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 624);
             this.Controls.Add(this.lblError);
@@ -317,6 +319,7 @@
             this.Name = "InsertarModificarPregunta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Insertar pregunta";
+            this.Load += new System.EventHandler(this.InsertarModificarPregunta_Load);
             this.grpBoxRespuestas.ResumeLayout(false);
             this.grpBoxRespuestas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

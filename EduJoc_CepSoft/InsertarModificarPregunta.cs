@@ -12,27 +12,30 @@ namespace EduJoc_CepSoft
         private const string TEMAS_JSON = "temas.json";
         private const string IDIOMAS_JSON = "idiomas.json";
 
-        private string pregunta;
+        private string pregunta = "";
 
         private bool correcta1 = false;
         private bool correcta2 = false;
         private bool correcta3 = false;
 
-        private string respuesta1;
-        private string respuesta2;
-        private string respuesta3;
+        private string respuesta1 = "";
+        private string respuesta2 = "";
+        private string respuesta3 = "";
 
-        private string tema;
+        private string tema = "";
+        private string idioma = "";
 
-        private int id;
+        private int id = -1;
 
         private List<Respuesta> respuestas = new List<Respuesta>();
 
-        private BindingList<Pregunta> preguntas_es;
-        private BindingList<Pregunta> preguntas_ca;
-        private BindingList<Pregunta> preguntas_en;
+        private BindingList<Pregunta> preguntas_es = null;
+        private BindingList<Pregunta> preguntas_ca = null;
+        private BindingList<Pregunta> preguntas_en = null;
 
         private Pregunta preguntaModificar;
+
+        private bool modificar;
 
         /// <summary>
         /// Cuando insertamos.
@@ -54,33 +57,69 @@ namespace EduJoc_CepSoft
             cmbIdioma.SelectedIndex = 0;
 
             lblId.Visible = false;
+
+            modificar = false;
         }
 
         /// <summary>
         /// Cuando modificamos.
         /// </summary>
         /// <param name="preguntaModificar">La pregunta que vamos a modificar</param>
-        /// <param name="preguntas_es">Lista de preguntas en castellano.</param>
-        /// <param name="preguntas_ca">Lista de preguntas en catalán.</param>
-        /// <param name="preguntas_en">Lista de preguntas en Inglés.</param>
-        public InsertarModificarPregunta(Pregunta preguntaModificar, BindingList<Pregunta> preguntas_es, BindingList<Pregunta> preguntas_ca, BindingList<Pregunta> preguntas_en)
+        public InsertarModificarPregunta(Pregunta preguntaModificar)
         {
             InitializeComponent();
 
             this.preguntaModificar = preguntaModificar;
 
-            this.preguntas_es = preguntas_es;
-            this.preguntas_ca = preguntas_ca;
-            this.preguntas_en = preguntas_en;
-
             cargarTemas();
             cargarIdiomas();
 
+            lblId.Visible = true;
+            lblId.Text = "#" + preguntaModificar.id;
+
+            //Rellenar campos.
+            //Comboboxes
             cmbIdioma.SelectedIndex = cmbIdioma.Items.IndexOf(this.preguntaModificar.idioma);
             cmbTema.SelectedIndex = cmbTema.Items.IndexOf(this.preguntaModificar.tema);
 
-            lblId.Visible = true;
-            lblId.Text = "#" + preguntaModificar.id;
+            //Textboxes.
+            tbtPregunta.Text = preguntaModificar.pregunta;
+            tbtResp1.Text = preguntaModificar.respuestas[0].respuesta;
+            tbtResp2.Text = preguntaModificar.respuestas[1].respuesta;
+            tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
+
+            
+            
+            //Radiobuttons.
+           /* for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
+            {
+                if (preguntaModificar.respuestas[i].correcta == true)
+                {
+                   // grpBoxRespuestas.Controls[i].Select();
+                    RadioButton rdbton = (RadioButton)grpBoxRespuestas.Controls[i];
+                    rdbton.Checked = true;
+                }
+            }*/
+
+            if(preguntaModificar.respuestas[0].correcta == true)
+            {
+                rdbtnResp1.Checked = true;
+            }else if (preguntaModificar.respuestas[1].correcta == true)
+            {
+                rdbtnResp2.Checked = true;
+            }
+            else
+            {
+                rdbtnResp3.Checked = true;
+            }
+
+            this.Text = "Modificar pregunta";
+
+            btnInsertarModificar.Text = "Modificar";
+
+            cmbIdioma.Enabled = false;
+
+            modificar = true;
         }
 
         private void cargarTemas()
@@ -107,142 +146,144 @@ namespace EduJoc_CepSoft
 
         private void btnInsertarModificar_Click(object sender, System.EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbtPregunta.Text))
+            if (!modificar) insertarPregunta();
+            else modificarPregunta();
+        }
+
+        private void insertarPregunta()
+        {
+            //Si todos los campos están rellenados, modificamos.
+            if (comprobarCampos())
             {
-                mostrarError(tbtPregunta, "Hay que escribir una pregunta");
-                tbtPregunta.Focus();
-            }
-            else
-            {
-                errorProvider.Clear();
                 pregunta = tbtPregunta.Text;
+                tema = cmbTema.Text;
+                idioma = cmbIdioma.Text;
+                respuesta1 = tbtResp1.Text;
+                respuesta2 = tbtResp2.Text;
+                respuesta3 = tbtResp3.Text;
 
-                if (string.IsNullOrEmpty(tbtResp1.Text))
+                if (rdbtnResp1.Checked) correcta1 = true;
+                else if (rdbtnResp2.Checked) correcta2 = true;
+                else correcta3 = true;
+
+                Respuesta objetoRespuesta1 = new Respuesta(respuesta1, correcta1);
+                Respuesta objetoRespuesta2 = new Respuesta(respuesta2, correcta2);
+                Respuesta objetoRespuesta3 = new Respuesta(respuesta3, correcta3);
+
+                respuestas.Add(objetoRespuesta1);
+                respuestas.Add(objetoRespuesta2);
+                respuestas.Add(objetoRespuesta3);
+
+                switch (idioma)
                 {
-                    mostrarError(tbtResp1, "Hay que escribir la respuesta 1");
-                    tbtResp1.Focus();
-                }
-                else
-                {
-                    errorProvider.Clear();
-                    respuesta1 = tbtResp1.Text;
+                    case "Castellano":
 
-                    if (string.IsNullOrEmpty(tbtResp2.Text))
-                    {
-                        mostrarError(tbtResp2, "Hay que escribir la respuesta 2");
-                        tbtResp2.Focus();
-                    }
-                    else
-                    {
-                        errorProvider.Clear();
-                        respuesta2 = tbtResp2.Text;
-
-                        if (string.IsNullOrEmpty(tbtResp3.Text))
-                        {
-                            mostrarError(tbtResp3, "Hay que escribir la respuesta 3");
-                            tbtResp3.Focus();
-                        }
+                        if (preguntas_es.Count > 0)
+                            id = preguntas_es.ElementAt<Pregunta>(preguntas_es.Count() - 1).id + 1;
                         else
-                        {
-                            errorProvider.Clear();
-                            respuesta3 = tbtResp3.Text;
+                            id = 1;
 
-                            if (rdbtnResp1.Checked)
-                            {
-                                correcta1 = true;
-                            }
-                            else if (rdbtnResp2.Checked)
-                            {
-                                correcta2 = true;
-                            }
-                            else
-                            {
-                                correcta3 = true;
-                            }
+                        Pregunta pregunta_es = new Pregunta(id, idioma, tema, pregunta, respuestas);
+                        preguntas_es.Add(pregunta_es);
 
-                            Respuesta objetoRespuesta1 = new Respuesta(respuesta1, correcta1);
-                            respuestas.Add(objetoRespuesta1);
-                            Respuesta objetoRespuesta2 = new Respuesta(respuesta2, correcta2);
-                            respuestas.Add(objetoRespuesta2);
-                            Respuesta objetoRespuesta3 = new Respuesta(respuesta3, correcta3);
-                            respuestas.Add(objetoRespuesta3);
+                        break;
 
-                            if (string.IsNullOrEmpty(cmbTema.Text))
-                            {
-                                mostrarError(cmbTema, "Seleccionar el tema de la pregunta");
-                            }
-                            else
-                            {
-                                errorProvider.Clear();
-                                tema = cmbTema.Text;
+                    case "Català":
 
-                                if (string.IsNullOrEmpty(cmbIdioma.Text))
-                                {
-                                    mostrarError(cmbTema, "Seleccionar el idioma de la pregunta");
-                                }
-                                else
-                                {
-                                    errorProvider.Clear();
+                        if (preguntas_ca.Count > 0)
+                            id = preguntas_ca.ElementAt<Pregunta>(preguntas_ca.Count() - 1).id + 1;
+                        else
+                            id = 1;
 
-                                    switch (cmbIdioma.Text)
-                                    {
-                                        case "Castellano":
+                        Pregunta pregunta_ca = new Pregunta(id, idioma, tema, pregunta, respuestas);
+                        preguntas_ca.Add(pregunta_ca);
 
-                                            if (preguntas_es.Count > 0)
-                                            {
-                                                id = preguntas_es.ElementAt<Pregunta>(preguntas_es.Count() - 1).id + 1;
-                                            }
-                                            else
-                                            {
-                                                id = 1;
-                                            }
+                        break;
 
-                                            Pregunta pregunta_es = new Pregunta(id, "Castellano", tema, pregunta, respuestas);
-                                            preguntas_es.Add(pregunta_es);
+                    case "English":
 
-                                            break;
+                        if (preguntas_en.Count > 0)
+                            id = preguntas_en.ElementAt<Pregunta>(preguntas_en.Count() - 1).id + 1;
+                        else
+                            id = 1;
 
-                                        case "Català":
+                        Pregunta pregunta_en = new Pregunta(id, idioma, tema, pregunta, respuestas);
+                        preguntas_en.Add(pregunta_en);
 
-                                            if (preguntas_ca.Count > 0)
-                                            {
-                                                id = preguntas_ca.ElementAt<Pregunta>(preguntas_ca.Count() - 1).id + 1;
-                                            }
-                                            else
-                                            {
-                                                id = 1;
-                                            }
-
-                                            Pregunta pregunta_ca = new Pregunta(id, "Català", tema, pregunta, respuestas);
-                                            preguntas_ca.Add(pregunta_ca);
-
-                                            break;
-
-                                        case "English":
-
-                                            if (preguntas_en.Count > 0)
-                                            {
-                                                id = preguntas_en.ElementAt<Pregunta>(preguntas_en.Count() - 1).id + 1;
-                                            }
-                                            else
-                                            {
-                                                id = 1;
-                                            }
-
-                                            Pregunta pregunta_en = new Pregunta(id, "English", tema, pregunta, respuestas);
-                                            preguntas_en.Add(pregunta_en);
-
-                                            break;
-                                    }
-
-                                    MessageBox.Show("Pregunta creada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Close();
-                                }
-                            }
-                        }
-                    }
+                        break;
                 }
+
+                MessageBox.Show("Pregunta creada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
+        }
+
+        private void modificarPregunta()
+        {
+            if (comprobarCampos())
+            {
+                preguntaModificar.pregunta = tbtPregunta.Text;
+                preguntaModificar.tema = cmbTema.Text;
+                preguntaModificar.idioma = cmbIdioma.Text;
+                preguntaModificar.respuestas[0].respuesta = tbtResp1.Text;
+                preguntaModificar.respuestas[1].respuesta = tbtResp2.Text;
+                preguntaModificar.respuestas[2].respuesta = tbtResp3.Text;
+
+                if (rdbtnResp1.Checked) correcta1 = true;
+                else if (rdbtnResp2.Checked) correcta2 = true;
+                else correcta3 = true;
+
+                preguntaModificar.respuestas[0].correcta = correcta1;
+                preguntaModificar.respuestas[1].correcta = correcta2;
+                preguntaModificar.respuestas[2].correcta = correcta3;
+
+                MessageBox.Show("Modificado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+        public bool comprobarCampos()
+        {
+            bool correcto = true;
+
+            if (string.IsNullOrEmpty(cmbTema.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(cmbTema, "Debes de seleccionar un tema.");
+            }
+            else if (string.IsNullOrEmpty(cmbIdioma.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(cmbIdioma, "Debes de seleccionar un idioma.");
+            }
+            else if (string.IsNullOrEmpty(tbtPregunta.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(tbtPregunta, "Debes de escribir una pregunta.");
+            }
+            else if (string.IsNullOrEmpty(tbtResp1.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(tbtResp1, "Debes de escribir la respuesta 1.");
+            }
+            else if (string.IsNullOrEmpty(tbtResp2.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(tbtResp2, "Debes de escribir la respuesta 2.");
+            }
+            else if (string.IsNullOrEmpty(tbtResp3.Text.Trim()))
+            {
+                correcto = false;
+                errorProvider.Clear();
+                mostrarError(tbtResp3, "Debes de escribir la respuesta 3.");
+            }
+
+            return correcto;
         }
 
         /// <summary>
@@ -271,6 +312,11 @@ namespace EduJoc_CepSoft
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
             comboBox.Focus();
+        }
+
+        private void InsertarModificarPregunta_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
