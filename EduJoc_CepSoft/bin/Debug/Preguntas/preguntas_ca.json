@@ -1,1 +1,1 @@
-[{"id":1,"tema":"Agua","pregunta":"Provant?"}]
+[{"id":1,"tema":"Agua","idioma":"Català","pregunta":"¿Test catalán?","respuestas":[{"respuesta":"respuesta 1","correcta":false},{"respuesta":"respuesta 2","correcta":true},{"respuesta":"respuesta 3","correcta":false}]}]
