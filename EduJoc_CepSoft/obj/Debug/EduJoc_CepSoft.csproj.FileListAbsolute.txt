@@ -1,60 +1,14 @@
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.exe
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
-C:\Users\x140l\Google Drive\Projecte 1 - DAM2A\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
-<<<<<<< HEAD
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarPregunta.resources
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
-=======
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
->>>>>>> e8727e04dccb3c5fc08a01a910e90267c8426e5a

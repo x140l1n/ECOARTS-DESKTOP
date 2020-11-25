@@ -79,7 +79,7 @@
             // 
             // cmbTema
             // 
-            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTema.FormattingEnabled = true;
@@ -112,11 +112,12 @@
             // 
             // tbtPregunta
             // 
-            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtPregunta.Location = new System.Drawing.Point(17, 98);
             this.tbtPregunta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtPregunta.MaxLength = 150;
             this.tbtPregunta.Multiline = true;
             this.tbtPregunta.Name = "tbtPregunta";
             this.tbtPregunta.Size = new System.Drawing.Size(362, 124);
@@ -142,10 +143,11 @@
             // 
             // tbtResp1
             // 
-            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp1.Location = new System.Drawing.Point(17, 260);
             this.tbtResp1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp1.MaxLength = 50;
             this.tbtResp1.Multiline = true;
             this.tbtResp1.Name = "tbtResp1";
             this.tbtResp1.Size = new System.Drawing.Size(267, 62);
@@ -164,10 +166,11 @@
             // 
             // tbtResp2
             // 
-            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp2.Location = new System.Drawing.Point(17, 361);
             this.tbtResp2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp2.MaxLength = 50;
             this.tbtResp2.Multiline = true;
             this.tbtResp2.Name = "tbtResp2";
             this.tbtResp2.Size = new System.Drawing.Size(267, 62);
@@ -186,10 +189,11 @@
             // 
             // tbtResp3
             // 
-            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp3.Location = new System.Drawing.Point(17, 460);
             this.tbtResp3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tbtResp3.MaxLength = 50;
             this.tbtResp3.Multiline = true;
             this.tbtResp3.Name = "tbtResp3";
             this.tbtResp3.Size = new System.Drawing.Size(267, 62);
