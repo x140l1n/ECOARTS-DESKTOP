@@ -17,9 +17,9 @@ namespace EduJoc_CepSoft
             tbtTema.Text = pregunta.tema;
             tbtIdioma.Text = pregunta.idioma;
             tbtPregunta.Text = pregunta.pregunta;
-            tbtResp1.Text = pregunta.respuestas[0].ToString();
-            tbtResp2.Text = pregunta.respuestas[1].ToString();
-            tbtResp3.Text = pregunta.respuestas[2].ToString();
+            tbtResp1.Text = pregunta.respuestas[0].respuesta.ToString();
+            tbtResp2.Text = pregunta.respuestas[1].respuesta.ToString();
+            tbtResp3.Text = pregunta.respuestas[2].respuesta.ToString();
 
             for (int i = 0; i < pregunta.respuestas.Count; i++)
             {

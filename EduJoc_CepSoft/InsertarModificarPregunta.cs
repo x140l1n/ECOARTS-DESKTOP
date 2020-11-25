@@ -207,6 +207,7 @@ namespace EduJoc_CepSoft
                                     }
 
                                     MessageBox.Show("Pregunta creada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
                                 }
                             }
                         }

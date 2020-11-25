@@ -99,8 +99,8 @@ namespace EduJoc_CepSoft
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
-            string idioma = cmbFiltrarIdioma.SelectedText;
-            string tema = cmbFiltrarTema.SelectedText;
+            string idioma = cmbFiltrarIdioma.Text;
+            string tema = cmbFiltrarTema.Text;
 
             BindingList<Pregunta> preguntasFiltrada = null;
 
@@ -116,9 +116,9 @@ namespace EduJoc_CepSoft
                     preguntasFiltrada = new BindingList<Pregunta>(preguntas_en.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text) && p.tema.Contains(tema)).ToList<Pregunta>());
                     break;
             }
-
+            //dgvPreguntas.DataSource = null;
             dgvPreguntas.DataSource = preguntasFiltrada;
-            dgvPreguntas.ClearSelection();
+    
         }
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -162,6 +162,25 @@ namespace EduJoc_CepSoft
         private void btnSalir_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+        
+        private void dgvPreguntas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           string idioma = dgvPreguntas.CurrentRow.Cells[2].Value.ToString();
+            if (idioma.Equals("Castellano"))
+            {
+                int posicio = dgvPreguntas.CurrentRow.Index;
+                Pregunta pregunta = preguntas_es[posicio];
+                VerRespuestas ver = new VerRespuestas (pregunta);
+                ver.ShowDialog();
+            }else if (idioma.Equals("Català")){
+                int posicio = dgvPreguntas.CurrentRow.Index;
+                Pregunta pregunta = preguntas_ca[posicio];
+                VerRespuestas ver = new VerRespuestas(pregunta);
+                ver.ShowDialog();
+            }else if (idioma.Equals("English")){
+
+            }
         }
     }
 }
