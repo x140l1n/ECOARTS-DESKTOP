@@ -58,3 +58,6 @@ E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarM
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\GitEscriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
 >>>>>>> e8727e04dccb3c5fc08a01a910e90267c8426e5a
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.GestionarPersonajes.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPersonaje.resources

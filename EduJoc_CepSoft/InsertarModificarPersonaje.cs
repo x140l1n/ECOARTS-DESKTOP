@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EduJoc_CepSoft
 {
-    public partial class GestionarPersonajes : Form
+    public partial class InsertarModificarPersonaje : Form
     {
-        public GestionarPersonajes()
+        public InsertarModificarPersonaje()
         {
             InitializeComponent();
         }
