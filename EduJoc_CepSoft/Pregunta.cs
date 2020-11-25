@@ -21,13 +21,13 @@ namespace EduJoc_CepSoft
         }
 
         /// <summary>
-        /// Comprobar si las dos preguntas son iguales. Son iguales cuando tienen la misma pregunta y del mismo tema.
+        /// Comprobar si las dos preguntas son iguales. Son iguales cuando tienen la misma pregunta y del mismo tema y del mismo idioma.
         /// </summary>
         /// <param name="other">La pregunta que vamos a comparar.</param>
         /// <returns>Devuelve true si las dos preguntas son iguales, caso contrario, false.</returns>
         public bool Equals(Pregunta other)
         {
-            return (this.pregunta.Equals(other.pregunta) && this.tema.Equals(other.tema));
+            return (this.pregunta.Equals(other.pregunta) && this.tema.Equals(other.tema) && this.idioma.Equals(other.idioma));
         }
     }
 }

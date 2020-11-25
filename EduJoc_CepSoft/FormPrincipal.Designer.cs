@@ -240,6 +240,10 @@ namespace EduJoc_CepSoft
             // dgvPreguntas
             // 
             this.dgvPreguntas.AllowUserToAddRows = false;
+<<<<<<< HEAD
+=======
+            this.dgvPreguntas.AllowUserToDeleteRows = false;
+>>>>>>> 142a9061a2994949d13f26f847ec941ffdce02fb
             this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,10 +269,14 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.Name = "dgvPreguntas";
             this.dgvPreguntas.ReadOnly = true;
             this.dgvPreguntas.RowHeadersWidth = 51;
-            this.dgvPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPreguntas.Size = new System.Drawing.Size(885, 593);
             this.dgvPreguntas.TabIndex = 2;
+<<<<<<< HEAD
             this.dgvPreguntas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreguntas_CellDoubleClick);
+=======
+            this.dgvPreguntas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreguntas_CellContentDoubleClick);
+>>>>>>> 142a9061a2994949d13f26f847ec941ffdce02fb
             // 
             // columnId
             // 

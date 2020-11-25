@@ -51,6 +51,8 @@ namespace EduJoc_CepSoft
             cargarTemas();
             cargarIdiomas();
 
+            cmbIdioma.SelectedIndex = 0;
+
             lblId.Visible = false;
         }
 
@@ -185,21 +187,48 @@ namespace EduJoc_CepSoft
                                     switch (cmbIdioma.Text)
                                     {
                                         case "Castellano":
-                                            id = preguntas_es.Count() + 1;
+
+                                            if (preguntas_es.Count > 0)
+                                            {
+                                                id = preguntas_es.ElementAt<Pregunta>(preguntas_es.Count() - 1).id + 1;
+                                            }
+                                            else
+                                            {
+                                                id = 1;
+                                            }
+
                                             Pregunta pregunta_es = new Pregunta(id, "Castellano", tema, pregunta, respuestas);
                                             preguntas_es.Add(pregunta_es);
 
                                             break;
 
                                         case "Català":
-                                            id = preguntas_ca.Count() + 1;
+
+                                            if (preguntas_ca.Count > 0)
+                                            {
+                                                id = preguntas_ca.ElementAt<Pregunta>(preguntas_ca.Count() - 1).id + 1;
+                                            }
+                                            else
+                                            {
+                                                id = 1;
+                                            }
+
                                             Pregunta pregunta_ca = new Pregunta(id, "Català", tema, pregunta, respuestas);
                                             preguntas_ca.Add(pregunta_ca);
 
                                             break;
 
                                         case "English":
-                                            id = preguntas_en.Count() + 1;
+
+                                            if (preguntas_en.Count > 0)
+                                            {
+                                                id = preguntas_en.ElementAt<Pregunta>(preguntas_en.Count() - 1).id + 1;
+                                            }
+                                            else
+                                            {
+                                                id = 1;
+                                            }
+
                                             Pregunta pregunta_en = new Pregunta(id, "English", tema, pregunta, respuestas);
                                             preguntas_en.Add(pregunta_en);
 
@@ -242,16 +271,6 @@ namespace EduJoc_CepSoft
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
             comboBox.Focus();
-        }
-
-        private void InsertarModificarPregunta_Load(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void cmbTema_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-
         }
     }
 }
