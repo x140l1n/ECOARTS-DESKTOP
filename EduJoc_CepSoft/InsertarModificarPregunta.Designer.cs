@@ -79,7 +79,7 @@
             // 
             // cmbTema
             // 
-            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTema.FormattingEnabled = true;
@@ -112,8 +112,8 @@
             // 
             // tbtPregunta
             // 
-            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtPregunta.Location = new System.Drawing.Point(17, 98);
             this.tbtPregunta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -143,7 +143,7 @@
             // 
             // tbtResp1
             // 
-            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp1.Location = new System.Drawing.Point(17, 260);
             this.tbtResp1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -166,7 +166,7 @@
             // 
             // tbtResp2
             // 
-            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp2.Location = new System.Drawing.Point(17, 361);
             this.tbtResp2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -189,7 +189,7 @@
             // 
             // tbtResp3
             // 
-            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp3.Location = new System.Drawing.Point(17, 460);
             this.tbtResp3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -258,7 +258,7 @@
             // 
             this.lblId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(14, 588);
+            this.lblId.Location = new System.Drawing.Point(28, 588);
             this.lblId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(0, 17);
@@ -267,13 +267,16 @@
             // btnInsertarModificar
             // 
             this.btnInsertarModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsertarModificar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnInsertarModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertarModificar.ForeColor = System.Drawing.Color.White;
             this.btnInsertarModificar.Location = new System.Drawing.Point(298, 580);
             this.btnInsertarModificar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnInsertarModificar.Name = "btnInsertarModificar";
             this.btnInsertarModificar.Size = new System.Drawing.Size(106, 32);
             this.btnInsertarModificar.TabIndex = 14;
             this.btnInsertarModificar.Text = "Insertar";
-            this.btnInsertarModificar.UseVisualStyleBackColor = true;
+            this.btnInsertarModificar.UseVisualStyleBackColor = false;
             this.btnInsertarModificar.Click += new System.EventHandler(this.btnInsertarModificar_Click);
             // 
             // errorProvider
