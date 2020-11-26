@@ -75,11 +75,7 @@ namespace EduJoc_CepSoft
             cmbIdioma.Enabled = false;
 
             modificar = true;
-
         }
-
-
-
 
         private void cargarIdiomas()
         {
@@ -150,7 +146,7 @@ namespace EduJoc_CepSoft
                 MessageBox.Show("Personaje creado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            
+
         }
 
         private void modificarPersonaje()
@@ -164,7 +160,6 @@ namespace EduJoc_CepSoft
             }
         }
 
-
         public bool comprobarCampos()
         {
             bool correcto = true;
@@ -172,25 +167,25 @@ namespace EduJoc_CepSoft
             if (string.IsNullOrEmpty(cmbIdioma.Text.Trim()))
             {
                 correcto = false;
-                errorProvider1.Clear();
+                errorProvider.Clear();
                 mostrarError(cmbIdioma, "Debes seleccionar un idioma.");
             }
             else if (string.IsNullOrEmpty(txtboxNombre.Text.Trim()))
             {
                 correcto = false;
-                errorProvider1.Clear();
+                errorProvider.Clear();
                 mostrarError(txtboxNombre, "Debes escribir el nombre del personaje.");
             }
             else if (string.IsNullOrEmpty(txtboxDescripcion.Text.Trim()))
             {
                 correcto = false;
-                errorProvider1.Clear();
+                errorProvider.Clear();
                 mostrarError(txtboxDescripcion, "Debes escribir la descripción del personaje.");
             }
             else if (picboxImagen.Image == null)
             {
                 correcto = false;
-                errorProvider1.Clear();
+                errorProvider.Clear();
                 mostrarError(picboxImagen, "Debes seleccionar una imagen.");
             }
 
@@ -205,7 +200,7 @@ namespace EduJoc_CepSoft
         /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
         public void mostrarError(TextBox textBox, string missatge)
         {
-            errorProvider1.SetError(textBox, missatge);
+            errorProvider.SetError(textBox, missatge);
 
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
@@ -219,7 +214,7 @@ namespace EduJoc_CepSoft
         /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
         public void mostrarError(ComboBox comboBox, string missatge)
         {
-            errorProvider1.SetError(comboBox, missatge);
+            errorProvider.SetError(comboBox, missatge);
 
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
@@ -233,7 +228,7 @@ namespace EduJoc_CepSoft
         /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
         public void mostrarError(PictureBox pictureBox, string missatge)
         {
-            errorProvider1.SetError(pictureBox, missatge);
+            errorProvider.SetError(pictureBox, missatge);
 
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
@@ -246,13 +241,14 @@ namespace EduJoc_CepSoft
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    openFileDialog.Filter = ""
                     string imagen = openFileDialog.FileName;
                     picboxImagen.Image = Image.FromFile(imagen);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

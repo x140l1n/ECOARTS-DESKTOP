@@ -207,8 +207,6 @@ namespace EduJoc_CepSoft
             this.Close();
         }
 
-
-
         private void dgvPreguntas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

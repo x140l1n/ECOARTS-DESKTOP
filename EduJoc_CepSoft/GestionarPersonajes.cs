@@ -36,9 +36,8 @@ namespace EduJoc_CepSoft
 
         private void GestionarPersonajes_Load(object sender, EventArgs e)
         {
-            
             CargarIdiomas();
-            
+
             CargarPersonajes(ref personajes_es, PERSONAJES_JSON_ES);
             CargarPersonajes(ref personajes_ca, PERSONAJES_JSON_CA);
             CargarPersonajes(ref personajes_en, PERSONAJES_JSON_EN);
@@ -96,11 +95,9 @@ namespace EduJoc_CepSoft
             jsonTextWriter.Close();
         }
 
-
         private void buscar()
         {
             string idioma = cmbFiltrarIdioma.Text;
-            
 
             BindingList<Personaje> PersonajesFiltrados = null;
 
@@ -151,7 +148,7 @@ namespace EduJoc_CepSoft
 
         private void toolStripButtonEdit_Click(object sender, EventArgs e)
         {
-            if(dgvPersonajes.SelectedCells.Count > 0)
+            if (dgvPersonajes.SelectedCells.Count > 0)
             {
                 Personaje personajeSeleccionado = (Personaje)dgvPersonajes.Rows[dgvPersonajes.SelectedCells[0].RowIndex].DataBoundItem;
 
@@ -160,7 +157,7 @@ namespace EduJoc_CepSoft
 
                 buscar();
             }
-            
+
         }
 
         private void toolStripButtonDelete_Click(object sender, EventArgs e)
@@ -173,7 +170,7 @@ namespace EduJoc_CepSoft
 
                 if (opcion == DialogResult.Yes)
                 {
-                    switch (personajeSeleccionado.idioma)   
+                    switch (personajeSeleccionado.idioma)
                     {
                         case "Castellano":
                             personajes_es.Remove(personajeSeleccionado);

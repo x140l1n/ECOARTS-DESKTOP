@@ -79,7 +79,7 @@
             // 
             // cmbTema
             // 
-            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTema.FormattingEnabled = true;
@@ -112,8 +112,8 @@
             // 
             // tbtPregunta
             // 
-            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbtPregunta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtPregunta.Location = new System.Drawing.Point(17, 98);
             this.tbtPregunta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -143,7 +143,7 @@
             // 
             // tbtResp1
             // 
-            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbtResp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp1.Location = new System.Drawing.Point(17, 260);
             this.tbtResp1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -166,7 +166,7 @@
             // 
             // tbtResp2
             // 
-            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbtResp2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp2.Location = new System.Drawing.Point(17, 361);
             this.tbtResp2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -189,7 +189,7 @@
             // 
             // tbtResp3
             // 
-            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbtResp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbtResp3.Location = new System.Drawing.Point(17, 460);
             this.tbtResp3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -319,7 +319,6 @@
             this.Name = "InsertarModificarPregunta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Insertar pregunta";
-            this.Load += new System.EventHandler(this.InsertarModificarPregunta_Load);
             this.grpBoxRespuestas.ResumeLayout(false);
             this.grpBoxRespuestas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
