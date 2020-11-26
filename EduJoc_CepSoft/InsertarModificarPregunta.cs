@@ -89,7 +89,7 @@ namespace EduJoc_CepSoft
             tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
 
             //Radiobuttons.
-            for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
+            for (int i = 0; i < preguntaModificar.respuestas.Count - 1; i++)
             {
                 if (preguntaModificar.respuestas[i].correcta == true)
                 {

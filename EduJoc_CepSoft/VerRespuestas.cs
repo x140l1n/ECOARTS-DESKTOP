@@ -24,7 +24,7 @@ namespace EduJoc_CepSoft
             tbtResp3.Text = pregunta.respuestas[2].respuesta;
 
 
-            for (int i = 0; i < pregunta.respuestas.Count; i++)
+            for (int i = 0; i < pregunta.respuestas.Count - 1; i++)
             {
                 if (pregunta.respuestas[i].correcta == true)
                 {
