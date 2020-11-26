@@ -78,7 +78,7 @@ namespace EduJoc_CepSoft
             lblId.Text = "#" + preguntaModificar.id;
 
             //Rellenar campos.
-            //Comboboxes
+            //Comboboxes.
             cmbIdioma.SelectedIndex = cmbIdioma.Items.IndexOf(this.preguntaModificar.idioma);
             cmbTema.SelectedIndex = cmbTema.Items.IndexOf(this.preguntaModificar.tema);
 
@@ -89,7 +89,7 @@ namespace EduJoc_CepSoft
             tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
 
             //Radiobuttons.
-            for (int i = 0; i < preguntaModificar.respuestas.Count - 1; i++)
+            for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
             {
                 if (preguntaModificar.respuestas[i].correcta == true)
                 {

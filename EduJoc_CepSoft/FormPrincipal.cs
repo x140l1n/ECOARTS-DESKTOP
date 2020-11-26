@@ -207,7 +207,9 @@ namespace EduJoc_CepSoft
             this.Close();
         }
 
-        private void dgvPreguntas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void dgvPreguntas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -216,6 +218,12 @@ namespace EduJoc_CepSoft
                 VerRespuestas verRespuestas = new VerRespuestas(pregunta);
                 verRespuestas.ShowDialog();
             }
+        }
+
+        private void btnPersonajes_Click(object sender, System.EventArgs e)
+        {
+            GestionarPersonajes gestionarPersonaje = new GestionarPersonajes();
+            gestionarPersonaje.ShowDialog();
         }
     }
 }

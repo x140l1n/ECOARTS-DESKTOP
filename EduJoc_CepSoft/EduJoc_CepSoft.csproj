@@ -61,12 +61,25 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarPersonajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPersonajes.Designer.cs">
+      <DependentUpon>GestionarPersonajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarModificarPersonaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarModificarPersonaje.Designer.cs">
+      <DependentUpon>InsertarModificarPersonaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertarModificarPregunta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InsertarModificarPregunta.Designer.cs">
       <DependentUpon>InsertarModificarPregunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personaje.cs" />
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +92,12 @@
     </Compile>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarPersonajes.resx">
+      <DependentUpon>GestionarPersonajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarModificarPersonaje.resx">
+      <DependentUpon>InsertarModificarPersonaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarModificarPregunta.resx">
       <DependentUpon>InsertarModificarPregunta.cs</DependentUpon>

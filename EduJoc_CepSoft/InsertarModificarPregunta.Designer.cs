@@ -222,7 +222,6 @@
             this.rdbtnResp3.Name = "rdbtnResp3";
             this.rdbtnResp3.Size = new System.Drawing.Size(83, 21);
             this.rdbtnResp3.TabIndex = 2;
-            this.rdbtnResp3.TabStop = true;
             this.rdbtnResp3.Text = "Correcta";
             this.rdbtnResp3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnResp3.UseVisualStyleBackColor = true;
@@ -236,7 +235,6 @@
             this.rdbtnResp2.Name = "rdbtnResp2";
             this.rdbtnResp2.Size = new System.Drawing.Size(83, 21);
             this.rdbtnResp2.TabIndex = 1;
-            this.rdbtnResp2.TabStop = true;
             this.rdbtnResp2.Text = "Correcta";
             this.rdbtnResp2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnResp2.UseVisualStyleBackColor = true;
@@ -321,6 +319,7 @@
             this.Name = "InsertarModificarPregunta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Insertar pregunta";
+            this.Load += new System.EventHandler(this.InsertarModificarPregunta_Load);
             this.grpBoxRespuestas.ResumeLayout(false);
             this.grpBoxRespuestas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

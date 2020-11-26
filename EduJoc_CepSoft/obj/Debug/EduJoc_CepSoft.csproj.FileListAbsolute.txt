@@ -1,14 +1,16 @@
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.exe
-E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.exe
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPrincipal.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.GestionarPersonajes.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPersonaje.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
