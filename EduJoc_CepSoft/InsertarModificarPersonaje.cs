@@ -247,7 +247,7 @@ namespace EduJoc_CepSoft
                     personajeModificar.nombre = txtboxNombre.Text.Trim();
                     personajeModificar.descripcion = txtboxDescripcion.Text.Trim();
                     personajeModificar.idioma = cmbIdioma.Text.Trim();
-                    personajeModificar.rutaImagen = picboxImagen.ImageLocation;
+                    personajeModificar.rutaImagen = moverImagen(picboxImagen.ImageLocation, RUTA_DIRECTORIO_IMG);
 
                     MessageBox.Show("Personaje modificado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
