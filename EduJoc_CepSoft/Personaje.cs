@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 
 namespace EduJoc_CepSoft
 {
-    public class Personaje : IEquatable<Personaje>
+    public class Personaje : IEquatable<string>
     {
         public int id { set; get; }
         public string nombre { set; get; }
@@ -28,11 +28,11 @@ namespace EduJoc_CepSoft
         /// <summary>
         /// Comprobar si dos personajes son iguales. Para ello comparamos el nombre y el idioma.
         /// </summary>
-        /// <param name="other">Personaje que vamos a comparar.</param>
+        /// <param name="nombre">El nombre que vamos a comparar.</param>
         /// <returns>Devuelve true en caso de que los dos personajes sean iguales.</returns>
-        public bool Equals(Personaje other)
+        public bool Equals(string nombre)
         {
-            return (this.nombre.Equals(other.nombre) && this.idioma.Equals(other.idioma));
+            return (this.nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
         }
 
         public static Bitmap Resize(Image image, int width, int height)

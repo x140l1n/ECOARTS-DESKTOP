@@ -104,13 +104,13 @@ namespace EduJoc_CepSoft
             switch (idioma)
             {
                 case "Castellano":
-                    PersonajesFiltrados = new BindingList<Personaje>(personajes_es.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text)).ToList<Personaje>());
+                    PersonajesFiltrados = new BindingList<Personaje>(personajes_es.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text.ToLower())).ToList<Personaje>());
                     break;
                 case "Català":
-                    PersonajesFiltrados = new BindingList<Personaje>(personajes_ca.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text)).ToList<Personaje>());
+                    PersonajesFiltrados = new BindingList<Personaje>(personajes_ca.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text.ToLower())).ToList<Personaje>());
                     break;
                 case "English":
-                    PersonajesFiltrados = new BindingList<Personaje>(personajes_en.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text)).ToList<Personaje>());
+                    PersonajesFiltrados = new BindingList<Personaje>(personajes_en.Where(p => p.nombre.ToLower().Contains(tbFiltrarPersonaje.Text.ToLower())).ToList<Personaje>());
                     break;
             }
 
@@ -152,12 +152,29 @@ namespace EduJoc_CepSoft
             {
                 Personaje personajeSeleccionado = (Personaje)dgvPersonajes.Rows[dgvPersonajes.SelectedCells[0].RowIndex].DataBoundItem;
 
-                InsertarModificarPersonaje modificarPersonaje = new InsertarModificarPersonaje(personajeSeleccionado);
-                modificarPersonaje.ShowDialog();
+                switch (personajeSeleccionado.idioma)
+                {
+                    case "Castellano":
+                        InsertarModificarPersonaje modificarPersonajeEs = new InsertarModificarPersonaje(personajeSeleccionado, personajes_es);
+                        modificarPersonajeEs.ShowDialog();
+
+                        break;
+
+                    case "Català":
+                        InsertarModificarPersonaje modificarPersonajeCa = new InsertarModificarPersonaje(personajeSeleccionado, personajes_ca);
+                        modificarPersonajeCa.ShowDialog(); 
+
+                        break;
+
+                    case "English":
+                        InsertarModificarPersonaje modificarPersonajeEn = new InsertarModificarPersonaje(personajeSeleccionado, personajes_en);
+                        modificarPersonajeEn.ShowDialog(); 
+
+                        break;
+                }
 
                 buscar();
             }
-
         }
 
         private void toolStripButtonDelete_Click(object sender, EventArgs e)
@@ -182,6 +199,8 @@ namespace EduJoc_CepSoft
                             personajes_en.Remove(personajeSeleccionado);
                             break;
                     }
+
+                    buscar();
                 }
             }
         }
@@ -202,6 +221,15 @@ namespace EduJoc_CepSoft
 
         private void toolStripButtonExit_Click(object sender, EventArgs e)
         {
+            //Ordenar los personajes por el id.
+            personajes_es = new BindingList<Personaje>(personajes_es.OrderBy(p => p.id).ToList());
+            personajes_ca = new BindingList<Personaje>(personajes_ca.OrderBy(p => p.id).ToList());
+            personajes_en = new BindingList<Personaje>(personajes_en.OrderBy(p => p.id).ToList());
+
+            GuardarPersonajes(personajes_es, PERSONAJES_JSON_ES);
+            GuardarPersonajes(personajes_ca, PERSONAJES_JSON_CA);
+            GuardarPersonajes(personajes_en, PERSONAJES_JSON_EN);
+
             this.Close();
         }
     }

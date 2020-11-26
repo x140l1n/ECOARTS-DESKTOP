@@ -27,7 +27,7 @@ namespace EduJoc_CepSoft
         /// <returns>Devuelve true si las dos preguntas son iguales, caso contrario, false.</returns>
         public bool Equals(Pregunta other)
         {
-            return (this.pregunta.Equals(other.pregunta) && this.tema.Equals(other.tema) && this.idioma.Equals(other.idioma));
+            return (this.pregunta.Equals(other.pregunta, StringComparison.OrdinalIgnoreCase) && this.tema.Equals(other.tema, StringComparison.OrdinalIgnoreCase) && this.idioma.Equals(other.idioma, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

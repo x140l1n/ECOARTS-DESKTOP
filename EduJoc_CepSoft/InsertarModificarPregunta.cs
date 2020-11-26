@@ -139,12 +139,12 @@ namespace EduJoc_CepSoft
             //Si todos los campos están rellenados, modificamos.
             if (comprobarCampos())
             {
-                pregunta = tbtPregunta.Text;
-                tema = cmbTema.Text;
-                idioma = cmbIdioma.Text;
-                respuesta1 = tbtResp1.Text;
-                respuesta2 = tbtResp2.Text;
-                respuesta3 = tbtResp3.Text;
+                pregunta = tbtPregunta.Text.Trim();
+                tema = cmbTema.Text.Trim();
+                idioma = cmbIdioma.Text.Trim();
+                respuesta1 = tbtResp1.Text.Trim();
+                respuesta2 = tbtResp2.Text.Trim();
+                respuesta3 = tbtResp3.Text.Trim();
 
                 if (rdbtnResp1.Checked) correcta1 = true;
                 else if (rdbtnResp2.Checked) correcta2 = true;

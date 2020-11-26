@@ -204,6 +204,15 @@ namespace EduJoc_CepSoft
 
         private void btnSalir_Click(object sender, System.EventArgs e)
         {
+            //Ordenar las preguntas por el id.
+            preguntas_es = new BindingList<Pregunta>(preguntas_es.OrderBy(p => p.id).ToList());
+            preguntas_ca = new BindingList<Pregunta>(preguntas_ca.OrderBy(p => p.id).ToList());
+            preguntas_en = new BindingList<Pregunta>(preguntas_en.OrderBy(p => p.id).ToList());
+
+            GuardarPreguntas(preguntas_es, PREGUNTAS_JSON_ES);
+            GuardarPreguntas(preguntas_ca, PREGUNTAS_JSON_CA);
+            GuardarPreguntas(preguntas_en, PREGUNTAS_JSON_EN);
+
             this.Close();
         }
 

@@ -14,7 +14,6 @@ namespace EduJoc_CepSoft
         private const string IDIOMAS_JSON = "idiomas.json";
 
         private string nombre = "";
-        private string rutaImagen = "";
         private string idioma = "";
         private string descripcion = "";
         private int id = -1;
@@ -24,8 +23,11 @@ namespace EduJoc_CepSoft
         private BindingList<Personaje> personajes_en = null;
 
         private Personaje personajeModificar;
+        private BindingList<Personaje> personajes = null;
 
         private bool modificar;
+
+        private const string RUTA_DIRECTORIO_IMG = ".//Personajes//img//";
 
         /// <summary>
         /// Cuando insertamos.
@@ -50,11 +52,18 @@ namespace EduJoc_CepSoft
             modificar = false;
         }
 
-        public InsertarModificarPersonaje(Personaje personajeModificar)
+        /// <summary>
+        /// Cuando modificamos.
+        /// </summary>
+        /// <param name="personajeModificar">El personaje que vamos a modificar.</param>
+        /// <param name="personajes">Lista de personajes.</param>
+        public InsertarModificarPersonaje(Personaje personajeModificar, BindingList<Personaje> personajes)
         {
             InitializeComponent();
 
             this.personajeModificar = personajeModificar;
+            this.personajes = personajes;
+            this.id = personajeModificar.id;
 
             cargarIdiomas();
 
@@ -99,64 +108,155 @@ namespace EduJoc_CepSoft
             //Comprobamos que todos los campos esten rellenados para insertar.
             if (comprobarCampos())
             {
-                nombre = txtboxNombre.Text;
-                descripcion = txtboxDescripcion.Text;
-                idioma = cmbIdioma.Text;
-                rutaImagen = picboxImagen.ImageLocation;
+                nombre = txtboxNombre.Text.Trim();
+                descripcion = txtboxDescripcion.Text.Trim();
+                idioma = cmbIdioma.Text.Trim();
 
+                if (!existePersonaje(nombre, idioma))
+                {
+                    string rutaImagenOrigen = picboxImagen.ImageLocation;
+
+                    string rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG);
+
+                    switch (idioma)
+                    {
+                        case "Castellano":
+
+                            if (personajes_es.Count > 0)
+                                id = personajes_es.ElementAt<Personaje>(personajes_es.Count() - 1).id + 1;
+                            else
+                                id = 1;
+
+                            Personaje personaje_es = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
+                            personajes_es.Add(personaje_es);
+
+                            break;
+
+                        case "Català":
+
+                            if (personajes_ca.Count > 0)
+                                id = personajes_ca.ElementAt<Personaje>(personajes_ca.Count() - 1).id + 1;
+                            else
+                                id = 1;
+
+                            Personaje personaje_ca = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
+                            personajes_ca.Add(personaje_ca);
+
+                            break;
+
+                        case "English":
+
+                            if (personajes_en.Count > 0)
+                                id = personajes_en.ElementAt<Personaje>(personajes_en.Count() - 1).id + 1;
+                            else
+                                id = 1;
+
+                            Personaje personaje_en = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
+                            personajes_en.Add(personaje_en);
+
+                            break;
+                    }
+
+                    MessageBox.Show("Personaje creado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    errorProvider.Clear();
+                    mostrarError(txtboxNombre, "Ya existe este personaje.");
+                }
+            }
+        }
+
+        private bool existePersonaje(string nombre, string idioma)
+        {
+            bool existe = false;
+            int index = 0;
+
+            if (!modificar)
+            {
                 switch (idioma)
                 {
                     case "Castellano":
 
-                        if (personajes_es.Count > 0)
-                            id = personajes_es.ElementAt<Personaje>(personajes_es.Count() - 1).id + 1;
-                        else
-                            id = 1;
+                        while (!existe && personajes_es.Count > index)
+                        {
+                            if (personajes_es[index].Equals(nombre))
+                                existe = true;
 
-                        Personaje personaje_es = new Personaje(id, nombre, idioma, rutaImagen, descripcion);
-                        personajes_es.Add(personaje_es);
+                            index++;
+                        }
 
                         break;
 
                     case "Català":
+                        while (!existe && personajes_ca.Count > index)
+                        {
+                            if (personajes_ca[index].Equals(nombre))
+                                existe = true;
 
-                        if (personajes_ca.Count > 0)
-                            id = personajes_ca.ElementAt<Personaje>(personajes_ca.Count() - 1).id + 1;
-                        else
-                            id = 1;
-
-                        Personaje personaje_ca = new Personaje(id, nombre, idioma, rutaImagen, descripcion);
-                        personajes_ca.Add(personaje_ca);
+                            index++;
+                        }
 
                         break;
 
                     case "English":
 
-                        if (personajes_en.Count > 0)
-                            id = personajes_en.ElementAt<Personaje>(personajes_en.Count() - 1).id + 1;
-                        else
-                            id = 1;
+                        while (!existe && personajes_en.Count > index)
+                        {
+                            if (personajes_en[index].Equals(nombre))
+                                existe = true;
 
-                        Personaje personaje_en = new Personaje(id, nombre, idioma, rutaImagen, descripcion);
-                        personajes_en.Add(personaje_en);
+                            index++;
+                        }
 
                         break;
                 }
+            }
+            else
+            {
+                while (!existe && personajes.Count > index)
+                {
+                    if (personajes[index].Equals(nombre) && personajes[index].id != id)
+                        existe = true;
 
-                MessageBox.Show("Personaje creado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                    index++;
+                }
             }
 
+            return existe;
+        }
+
+        private string moverImagen(string origen, string destino)
+        {
+            string nombreImagen = Path.GetFileName(origen);
+            string rutaDestinoImagen = destino + nombreImagen;
+
+            if (!File.Exists(rutaDestinoImagen))
+                File.Copy(origen, rutaDestinoImagen, true);
+
+            return rutaDestinoImagen;
         }
 
         private void modificarPersonaje()
         {
             if (comprobarCampos())
             {
-                personajeModificar.nombre = txtboxNombre.Text;
-                personajeModificar.descripcion = txtboxDescripcion.Text;
-                personajeModificar.idioma = cmbIdioma.Text;
-                personajeModificar.rutaImagen = picboxImagen.ImageLocation;
+                if (!existePersonaje(txtboxNombre.Text, cmbIdioma.Text))
+                {
+                    personajeModificar.nombre = txtboxNombre.Text.Trim();
+                    personajeModificar.descripcion = txtboxDescripcion.Text.Trim();
+                    personajeModificar.idioma = cmbIdioma.Text.Trim();
+                    personajeModificar.rutaImagen = picboxImagen.ImageLocation;
+
+                    MessageBox.Show("Personaje modificado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    errorProvider.Clear();
+                    mostrarError(txtboxNombre, "Ya existe este personaje.");
+                }
             }
         }
 
@@ -232,21 +332,26 @@ namespace EduJoc_CepSoft
 
             //Mostrem el missatge també en un lloc visible del formulari.
             lblError.Text = missatge.ToUpper();
+            pictureBox.Focus();
         }
 
         private void btnImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+
             try
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    openFileDialog.Filter = ""
-                    string imagen = openFileDialog.FileName;
-                    picboxImagen.Image = Image.FromFile(imagen);
+                    openFileDialog.Filter = "Files|*.jpg;*.jpeg;*.png;";
+
+                    string ruta_imagen = openFileDialog.FileName;
+
+                    picboxImagen.Image = Image.FromFile(ruta_imagen);
+                    picboxImagen.ImageLocation = ruta_imagen;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarPersonajes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStripPersonajes = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonEdit = new System.Windows.Forms.ToolStripButton();
@@ -49,8 +48,8 @@
             this.ColumnaIdioma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaImagen = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnRutaImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRutaImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripPersonajes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).BeginInit();
             this.gbFiltrar.SuspendLayout();
@@ -159,19 +158,11 @@
             this.ColumnaIdioma,
             this.ColumnNombre,
             this.ColumnaImagen,
-            this.ColumnRutaImagen,
-            this.ColumnaDescripcion});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersonajes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnaDescripcion,
+            this.ColumnRutaImagen});
             this.dgvPersonajes.EnableHeadersVisualStyles = false;
             this.dgvPersonajes.Location = new System.Drawing.Point(16, 134);
-            this.dgvPersonajes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPersonajes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPersonajes.Name = "dgvPersonajes";
             this.dgvPersonajes.ReadOnly = true;
             this.dgvPersonajes.Size = new System.Drawing.Size(801, 364);
@@ -185,9 +176,9 @@
             this.gbFiltrar.Controls.Add(this.cmbFiltrarIdioma);
             this.gbFiltrar.Controls.Add(this.panelTbBuscar);
             this.gbFiltrar.Location = new System.Drawing.Point(16, 53);
-            this.gbFiltrar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gbFiltrar.Margin = new System.Windows.Forms.Padding(5);
             this.gbFiltrar.Name = "gbFiltrar";
-            this.gbFiltrar.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gbFiltrar.Padding = new System.Windows.Forms.Padding(5);
             this.gbFiltrar.Size = new System.Drawing.Size(802, 72);
             this.gbFiltrar.TabIndex = 5;
             this.gbFiltrar.TabStop = false;
@@ -199,7 +190,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(667, 32);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(121, 25);
             this.btnBuscar.TabIndex = 4;
@@ -214,7 +205,7 @@
             this.cmbFiltrarIdioma.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarIdioma.FormattingEnabled = true;
             this.cmbFiltrarIdioma.Location = new System.Drawing.Point(472, 32);
-            this.cmbFiltrarIdioma.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmbFiltrarIdioma.Margin = new System.Windows.Forms.Padding(5);
             this.cmbFiltrarIdioma.Name = "cmbFiltrarIdioma";
             this.cmbFiltrarIdioma.Size = new System.Drawing.Size(185, 25);
             this.cmbFiltrarIdioma.TabIndex = 2;
@@ -228,7 +219,7 @@
             this.panelTbBuscar.Controls.Add(this.pictureBox1);
             this.panelTbBuscar.Controls.Add(this.tbFiltrarPersonaje);
             this.panelTbBuscar.Location = new System.Drawing.Point(9, 32);
-            this.panelTbBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelTbBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.panelTbBuscar.Name = "panelTbBuscar";
             this.panelTbBuscar.Size = new System.Drawing.Size(452, 25);
             this.panelTbBuscar.TabIndex = 1;
@@ -237,7 +228,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +242,7 @@
             this.tbFiltrarPersonaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFiltrarPersonaje.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltrarPersonaje.Location = new System.Drawing.Point(41, 3);
-            this.tbFiltrarPersonaje.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbFiltrarPersonaje.Margin = new System.Windows.Forms.Padding(5);
             this.tbFiltrarPersonaje.Name = "tbFiltrarPersonaje";
             this.tbFiltrarPersonaje.Size = new System.Drawing.Size(402, 18);
             this.tbFiltrarPersonaje.TabIndex = 1;
@@ -283,15 +274,23 @@
             this.ColumnNombre.HeaderText = "Nombre";
             this.ColumnNombre.Name = "ColumnNombre";
             this.ColumnNombre.ReadOnly = true;
-            this.ColumnNombre.Width = 200;
             // 
             // ColumnaImagen
             // 
-            this.ColumnaImagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnaImagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColumnaImagen.DataPropertyName = "imagen";
             this.ColumnaImagen.HeaderText = "Imagen";
             this.ColumnaImagen.Name = "ColumnaImagen";
             this.ColumnaImagen.ReadOnly = true;
+            this.ColumnaImagen.Width = 72;
+            // 
+            // ColumnaDescripcion
+            // 
+            this.ColumnaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnaDescripcion.DataPropertyName = "descripcion";
+            this.ColumnaDescripcion.HeaderText = "Descripción";
+            this.ColumnaDescripcion.Name = "ColumnaDescripcion";
+            this.ColumnaDescripcion.ReadOnly = true;
             // 
             // ColumnRutaImagen
             // 
@@ -305,14 +304,6 @@
             this.ColumnRutaImagen.Visible = false;
             this.ColumnRutaImagen.Width = 508;
             // 
-            // ColumnaDescripcion
-            // 
-            this.ColumnaDescripcion.DataPropertyName = "descripcion";
-            this.ColumnaDescripcion.HeaderText = "Descripción";
-            this.ColumnaDescripcion.Name = "ColumnaDescripcion";
-            this.ColumnaDescripcion.ReadOnly = true;
-            this.ColumnaDescripcion.Visible = false;
-            // 
             // GestionarPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -323,7 +314,7 @@
             this.Controls.Add(this.toolStripPersonajes);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestionarPersonajes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar Personajes";
@@ -360,7 +351,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaIdioma;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
         private System.Windows.Forms.DataGridViewImageColumn ColumnaImagen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRutaImagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRutaImagen;
     }
 }
