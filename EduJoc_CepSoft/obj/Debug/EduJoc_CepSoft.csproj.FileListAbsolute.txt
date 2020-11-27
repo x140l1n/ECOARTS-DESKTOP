@@ -13,7 +13,6 @@ E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte E
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
-E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.exe
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
@@ -47,3 +46,4 @@ D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSof
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
