@@ -1,1 +1,1 @@
-[{"id":1,"tema":"Agua","idioma":"Català","pregunta":"¿Test catalán?","respuestas":[{"respuesta":"respuesta 1","correcta":false},{"respuesta":"respuesta 2","correcta":true},{"respuesta":"respuesta 3","correcta":false}]}]
+[{"id":1,"tema":"Plástico","idioma":"Català","pregunta":"Quantes bosses de plàstic es consumeixen en 1 minut a tot el món?","respuestas":[{"respuesta":"10.000.000.000","correcta":false},{"respuesta":"1.000.000","correcta":true},{"respuesta":"25","correcta":false}]}]

@@ -89,13 +89,20 @@ namespace EduJoc_CepSoft
             tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
 
             //Radiobuttons.
-            for (int i = 0; i < preguntaModificar.respuestas.Count; i++)
+            
+            if (preguntaModificar.respuestas[0].correcta == true)
             {
-                if (preguntaModificar.respuestas[i].correcta == true)
-                {
-                    grpBoxRespuestas.Controls[i].Select();
-                }
+                rdbtnResp1.Checked = true;
+
+            }else if(preguntaModificar.respuestas[1].correcta == true)
+            {
+                rdbtnResp2.Checked = true;
             }
+            else
+            {
+                rdbtnResp3.Checked = true;
+            }
+            
 
             this.Text = "Modificar pregunta";
 
@@ -206,6 +213,9 @@ namespace EduJoc_CepSoft
         {
             if (comprobarCampos())
             {
+                correcta1 = false;
+                correcta2 = false;
+                correcta3 = false;
                 preguntaModificar.pregunta = tbtPregunta.Text;
                 preguntaModificar.tema = cmbTema.Text;
                 preguntaModificar.idioma = cmbIdioma.Text;
