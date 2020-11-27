@@ -185,6 +185,7 @@ namespace EduJoc_CepSoft
                             break;
                     }
                 }
+                buscar();
             }
         }
 
