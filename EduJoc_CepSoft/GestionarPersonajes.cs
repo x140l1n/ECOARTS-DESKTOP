@@ -49,8 +49,8 @@ namespace EduJoc_CepSoft
             switch (idioma)
             {
                 case "Castellano": dgvPersonajes.DataSource = personajes_es; break;
-                case "Catalán": dgvPersonajes.DataSource = personajes_ca; break;
-                case "Inglés": dgvPersonajes.DataSource = personajes_en; break;
+                case "Català": dgvPersonajes.DataSource = personajes_ca; break;
+                case "English": dgvPersonajes.DataSource = personajes_en; break;
             }
 
             dgvPersonajes.ClearSelection();
@@ -256,8 +256,8 @@ namespace EduJoc_CepSoft
             switch (idioma)
             {
                 case "Castellano": dgvPersonajes.DataSource = personajes_es; break;
-                case "Catalán": dgvPersonajes.DataSource = personajes_ca; break;
-                case "Inglés": dgvPersonajes.DataSource = personajes_en; break;
+                case "Català": dgvPersonajes.DataSource = personajes_ca; break;
+                case "English": dgvPersonajes.DataSource = personajes_en; break;
             }
 
             dgvPersonajes.ClearSelection();
