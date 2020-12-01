@@ -30,7 +30,7 @@ namespace EduJoc_CepSoft
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStripPrincipal = new System.Windows.Forms.ToolStrip();
             this.btnAnadir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
@@ -41,7 +41,6 @@ namespace EduJoc_CepSoft
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.gbFiltrar = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.cmbFiltrarTema = new System.Windows.Forms.ComboBox();
             this.cmbFiltrarIdioma = new System.Windows.Forms.ComboBox();
             this.panelTbBuscar = new System.Windows.Forms.Panel();
@@ -150,7 +149,6 @@ namespace EduJoc_CepSoft
             // 
             this.gbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFiltrar.Controls.Add(this.btnBuscar);
             this.gbFiltrar.Controls.Add(this.cmbFiltrarTema);
             this.gbFiltrar.Controls.Add(this.cmbFiltrarIdioma);
             this.gbFiltrar.Controls.Add(this.panelTbBuscar);
@@ -163,32 +161,18 @@ namespace EduJoc_CepSoft
             this.gbFiltrar.TabStop = false;
             this.gbFiltrar.Text = "Filtrar";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(786, 19);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(91, 33);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // cmbFiltrarTema
             // 
             this.cmbFiltrarTema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarTema.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarTema.FormattingEnabled = true;
-            this.cmbFiltrarTema.Location = new System.Drawing.Point(477, 27);
+            this.cmbFiltrarTema.Location = new System.Drawing.Point(584, 26);
             this.cmbFiltrarTema.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFiltrarTema.Name = "cmbFiltrarTema";
-            this.cmbFiltrarTema.Size = new System.Drawing.Size(140, 25);
+            this.cmbFiltrarTema.Size = new System.Drawing.Size(197, 30);
             this.cmbFiltrarTema.TabIndex = 3;
+            this.cmbFiltrarTema.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarTema_SelectedIndexChanged);
             // 
             // cmbFiltrarIdioma
             // 
@@ -196,11 +180,12 @@ namespace EduJoc_CepSoft
             this.cmbFiltrarIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarIdioma.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarIdioma.FormattingEnabled = true;
-            this.cmbFiltrarIdioma.Location = new System.Drawing.Point(329, 27);
+            this.cmbFiltrarIdioma.Location = new System.Drawing.Point(348, 27);
             this.cmbFiltrarIdioma.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFiltrarIdioma.Name = "cmbFiltrarIdioma";
-            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(140, 25);
+            this.cmbFiltrarIdioma.Size = new System.Drawing.Size(197, 30);
             this.cmbFiltrarIdioma.TabIndex = 2;
+            this.cmbFiltrarIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarIdioma_SelectedIndexChanged);
             // 
             // panelTbBuscar
             // 
@@ -236,8 +221,9 @@ namespace EduJoc_CepSoft
             this.tbFiltrarPregunta.Location = new System.Drawing.Point(31, 3);
             this.tbFiltrarPregunta.Margin = new System.Windows.Forms.Padding(4);
             this.tbFiltrarPregunta.Name = "tbFiltrarPregunta";
-            this.tbFiltrarPregunta.Size = new System.Drawing.Size(276, 18);
+            this.tbFiltrarPregunta.Size = new System.Drawing.Size(276, 22);
             this.tbFiltrarPregunta.TabIndex = 1;
+            this.tbFiltrarPregunta.TextChanged += new System.EventHandler(this.tbFiltrarPregunta_TextChanged);
             // 
             // dgvPreguntas
             // 
@@ -246,15 +232,15 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPreguntas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPreguntas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPreguntas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnId,
@@ -315,7 +301,7 @@ namespace EduJoc_CepSoft
             // FormPrincipal
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 730);
             this.Controls.Add(this.dgvPreguntas);
@@ -358,7 +344,6 @@ namespace EduJoc_CepSoft
         private System.Windows.Forms.TextBox tbFiltrarPregunta;
         private System.Windows.Forms.ComboBox cmbFiltrarTema;
         private System.Windows.Forms.ComboBox cmbFiltrarIdioma;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvPreguntas;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaIdioma;

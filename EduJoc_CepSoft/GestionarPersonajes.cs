@@ -19,6 +19,7 @@ namespace EduJoc_CepSoft
         private const string PERSONAJES_JSON_EN = ".//Personajes/personajes_en.json";
         private const string PERSONAJES_JSON_CA = ".//Personajes/personajes_ca.json";
 
+
         private const string IDIOMAS_JSON = "idiomas.json";
 
         private BindingList<Personaje> personajes_es;
@@ -199,6 +200,7 @@ namespace EduJoc_CepSoft
 
                 if (opcion == DialogResult.Yes)
                 {
+                   
                     //En caso de que aceptemos, eliminamos el personaje dependiendo del idioma que tenga como atributo.
                     switch (personajeSeleccionado.idioma)
                     {
@@ -214,6 +216,7 @@ namespace EduJoc_CepSoft
                     }
                     //Actualizamos la grid una vez hayamos eliminado el personaje.
                     ActualizarGrid();
+                    
                 }
             }
         }
@@ -261,6 +264,17 @@ namespace EduJoc_CepSoft
             }
 
             dgvPersonajes.ClearSelection();
+            dgvPersonajes.Refresh();
+        }
+
+        private void tbFiltrarPersonaje_TextChanged(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void cmbFiltrarIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buscar();
         }
     }
 }

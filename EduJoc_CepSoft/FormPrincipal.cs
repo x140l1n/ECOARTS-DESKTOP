@@ -33,8 +33,7 @@ namespace EduJoc_CepSoft
         //funcion load al cargar el programa
         private void FormPrincipal_Load(object sender, System.EventArgs e)
         {
-            //si apretamos enter en formulario será lo mismo que el evento clic sobre el boton buscar
-            this.AcceptButton = btnBuscar;
+            
             //llamamos a la funcion cargarTemas y cargarIdiomas para rellenar comboBox 
             cargarTemas();
             cargarIdiomas();
@@ -131,13 +130,13 @@ namespace EduJoc_CepSoft
                 //miramos que la pregunta contenga el texto que ha escrito el usuario en el textBox i coincida con el tema
                 //todas las preguntas que coincidan con el criterio se pondrán dentro la bindingList filtrada
                 case "Castellano":
-                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_es.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text) && p.tema.Contains(tema)).ToList<Pregunta>());
+                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_es.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text.ToLower()) && p.tema.Contains(tema)).ToList<Pregunta>());
                     break;
                 case "Català":
-                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_ca.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text) && p.tema.Contains(tema)).ToList<Pregunta>());
+                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_ca.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text.ToLower()) && p.tema.Contains(tema)).ToList<Pregunta>());
                     break;
                 case "English":
-                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_en.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text) && p.tema.Contains(tema)).ToList<Pregunta>());
+                    preguntasFiltrada = new BindingList<Pregunta>(preguntas_en.Where(p => p.pregunta.ToLower().Contains(tbFiltrarPregunta.Text.ToLower()) && p.tema.Contains(tema)).ToList<Pregunta>());
                     break;
             }
 
@@ -264,6 +263,21 @@ namespace EduJoc_CepSoft
             GestionarPersonajes gestionarPersonaje = new GestionarPersonajes();
             //y lo mostramos
             gestionarPersonaje.ShowDialog();
+        }
+
+        private void tbFiltrarPregunta_TextChanged(object sender, System.EventArgs e)
+        {
+            buscar();
+        }
+
+        private void cmbFiltrarIdioma_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            buscar();
+        }
+
+        private void cmbFiltrarTema_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            buscar();
         }
     }
 }

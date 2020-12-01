@@ -126,8 +126,9 @@ namespace EduJoc_CepSoft
                 {
                     //Guardamos la ruta de la imagen que hemos seleccionado para nuestro personaje y la movemos a nuestra carpeta img.
                     string rutaImagenOrigen = picboxImagen.ImageLocation;
+                    string rutaImagenDestino="";
 
-                    string rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG);
+
 
                     switch (idioma)
                     {
@@ -139,6 +140,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
                             //Instanciamos el nuevo personaje y lo añadimos a la BindingList de personajes.
+                           rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "es");
                             Personaje personaje_es = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_es.Add(personaje_es);
 
@@ -151,6 +153,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
 
+                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "ca");
                             Personaje personaje_ca = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_ca.Add(personaje_ca);
 
@@ -163,6 +166,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
 
+                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "en");
                             Personaje personaje_en = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_en.Add(personaje_en);
 
@@ -257,10 +261,10 @@ namespace EduJoc_CepSoft
         /// <param name="origen">Ruta de origen de la imagen.</param>
         /// <param name="destino">Ruta de destino de la imagen (directorio img)</param>
         /// <returns>Esta función nos retorna la ruta final de la imagen.</returns>
-        private string moverImagen(string origen, string destino)
+        private string moverImagen(string origen, string destino, int id, string idioma)
         {
             string nombreImagen = Path.GetFileName(origen);
-            string rutaDestinoImagen = destino + nombreImagen;
+            string rutaDestinoImagen = destino + nombreImagen.Split('.')[0] + "_" + idioma + "_"  + id + "." + nombreImagen.Split('.')[1];
 
             if (!File.Exists(rutaDestinoImagen))
                 //Con el último parámetro indicamos que queremos sobreescribir la imagen en caso de que ya exista en la rutaDestinoImagen.
@@ -278,11 +282,22 @@ namespace EduJoc_CepSoft
             {
                 if (!existePersonaje(txtboxNombre.Text, cmbIdioma.Text))
                 {
+                    String idioma = "";
+                    switch (cmbIdioma.Text)
+                    {
+                        case "Castellano": idioma = "es";
+                            break;
+                        case "Català": idioma = "ca";
+                            break;
+                        case "English": idioma = "en";
+                            break;
+
+                    }
                     //Modificamos los datos del personaje quitando los espacios al final de los string.
                     personajeModificar.nombre = txtboxNombre.Text.Trim();
                     personajeModificar.descripcion = txtboxDescripcion.Text.Trim();
                     personajeModificar.idioma = cmbIdioma.Text.Trim();
-                    personajeModificar.rutaImagen = moverImagen(picboxImagen.ImageLocation, RUTA_DIRECTORIO_IMG);
+                    personajeModificar.rutaImagen = moverImagen(picboxImagen.ImageLocation, RUTA_DIRECTORIO_IMG, personajeModificar.id, idioma);
 
                     MessageBox.Show("Personaje modificado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -383,11 +398,12 @@ namespace EduJoc_CepSoft
 
             try
             {
+                //Filtramos los archivos que queremos que nos salgan según sus extensiones:
+                openFileDialog.Filter = "Files|*.jpg;*.jpeg;*.png;";
                 //Si seleccionamos un archivo y le damos al botón "Abrir":
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Filtramos los archivos que queremos que nos salgan según sus extensiones:
-                    openFileDialog.Filter = "Files|*.jpg;*.jpeg;*.png;";
+                    
 
                     //Guardamos la ruta del archivo seleccionado.
                     string ruta_imagen = openFileDialog.FileName;
