@@ -55,11 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormPrincipal.cs">
+    <Compile Include="FormPresentacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrincipal.Designer.cs">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <Compile Include="FormPresentacion.Designer.cs">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreguntas.Designer.cs">
+      <DependentUpon>FormPreguntas.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionarPersonajes.cs">
       <SubType>Form</SubType>
@@ -90,8 +96,11 @@
     <Compile Include="VerRespuestas.Designer.cs">
       <DependentUpon>VerRespuestas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormPrincipal.resx">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="FormPresentacion.resx">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreguntas.resx">
+      <DependentUpon>FormPreguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarPersonajes.resx">
       <DependentUpon>GestionarPersonajes.cs</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿
 namespace EduJoc_CepSoft
 {
-    partial class FormPrincipal
+    partial class FormPreguntas
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,16 +29,14 @@ namespace EduJoc_CepSoft
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreguntas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStripPrincipal = new System.Windows.Forms.ToolStrip();
             this.btnAnadir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnPersonajes = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.gbFiltrar = new System.Windows.Forms.GroupBox();
             this.cmbFiltrarTema = new System.Windows.Forms.ComboBox();
@@ -67,8 +65,6 @@ namespace EduJoc_CepSoft
             this.btnEliminar,
             this.btnGuardar,
             this.toolStripSeparator1,
-            this.btnPersonajes,
-            this.toolStripSeparator2,
             this.btnSalir});
             this.toolStripPrincipal.Location = new System.Drawing.Point(0, 0);
             this.toolStripPrincipal.Name = "toolStripPrincipal";
@@ -119,21 +115,6 @@ namespace EduJoc_CepSoft
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
-            // 
-            // btnPersonajes
-            // 
-            this.btnPersonajes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnPersonajes.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonajes.Image")));
-            this.btnPersonajes.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPersonajes.Name = "btnPersonajes";
-            this.btnPersonajes.Size = new System.Drawing.Size(34, 34);
-            this.btnPersonajes.Text = "Gestionar personajes";
-            this.btnPersonajes.Click += new System.EventHandler(this.btnPersonajes_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
             // btnSalir
             // 
@@ -232,15 +213,15 @@ namespace EduJoc_CepSoft
             this.dgvPreguntas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPreguntas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPreguntas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPreguntas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnId,
@@ -298,7 +279,7 @@ namespace EduJoc_CepSoft
             this.columnPregunta.Name = "columnPregunta";
             this.columnPregunta.ReadOnly = true;
             // 
-            // FormPrincipal
+            // FormPreguntas
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -310,7 +291,7 @@ namespace EduJoc_CepSoft
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormPrincipal";
+            this.Name = "FormPreguntas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de preguntas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
@@ -335,8 +316,6 @@ namespace EduJoc_CepSoft
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btnPersonajes;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnSalir;
         private System.Windows.Forms.GroupBox gbFiltrar;
         private System.Windows.Forms.Panel panelTbBuscar;

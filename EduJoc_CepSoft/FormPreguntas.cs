@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace EduJoc_CepSoft
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPreguntas : Form
     {
         //variables para archivos json
         private const string PREGUNTAS_JSON_ES = ".//Preguntas//preguntas_es.json";
@@ -22,7 +22,7 @@ namespace EduJoc_CepSoft
         private BindingList<Pregunta> preguntas_ca;
         private BindingList<Pregunta> preguntas_en;
 
-        public FormPrincipal()
+        public FormPreguntas()
         {
             InitializeComponent();
             //inicializamos binding list de cada idioma
