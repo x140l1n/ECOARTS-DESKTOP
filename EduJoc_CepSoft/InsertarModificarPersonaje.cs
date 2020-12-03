@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
@@ -44,7 +43,7 @@ namespace EduJoc_CepSoft
             this.personajes_en = personajes_en;
 
             cargarIdiomas();
-            
+
             //Idioma predeterminado (castellano).
             cmbIdioma.SelectedIndex = 0;
 
@@ -125,10 +124,8 @@ namespace EduJoc_CepSoft
                 if (!existePersonaje(nombre, idioma))
                 {
                     //Guardamos la ruta de la imagen que hemos seleccionado para nuestro personaje y la movemos a nuestra carpeta img.
-                    string rutaImagenOrigen = picboxImagen.ImageLocation;
-                    string rutaImagenDestino="";
-
-
+                    string rutaImagenOrigen = picboxImagen.ImageLocation.ToLower();
+                    string rutaImagenDestino;
 
                     switch (idioma)
                     {
@@ -140,7 +137,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
                             //Instanciamos el nuevo personaje y lo añadimos a la BindingList de personajes.
-                           rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "es");
+                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "es").ToLower();
                             Personaje personaje_es = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_es.Add(personaje_es);
 
@@ -153,7 +150,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
 
-                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "ca");
+                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "ca").ToLower();
                             Personaje personaje_ca = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_ca.Add(personaje_ca);
 
@@ -166,7 +163,7 @@ namespace EduJoc_CepSoft
                             else
                                 id = 1;
 
-                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "en");
+                            rutaImagenDestino = moverImagen(rutaImagenOrigen, RUTA_DIRECTORIO_IMG, id, "en").ToLower();
                             Personaje personaje_en = new Personaje(id, nombre, idioma, rutaImagenDestino, descripcion);
                             personajes_en.Add(personaje_en);
 
@@ -251,7 +248,7 @@ namespace EduJoc_CepSoft
                     index++;
                 }
             }
-            
+
             return existe;
         }
 
@@ -260,17 +257,28 @@ namespace EduJoc_CepSoft
         /// </summary>
         /// <param name="origen">Ruta de origen de la imagen.</param>
         /// <param name="destino">Ruta de destino de la imagen (directorio img)</param>
+        /// <param name="id">El id del personaje.</param>
+        /// <param name="idioma">El idioma del personaje.</param>
         /// <returns>Esta función nos retorna la ruta final de la imagen.</returns>
         private string moverImagen(string origen, string destino, int id, string idioma)
         {
-            string nombreImagen = Path.GetFileName(origen);
-            string rutaDestinoImagen = destino + nombreImagen.Split('.')[0] + "_" + idioma + "_"  + id + "." + nombreImagen.Split('.')[1];
+            switch (idioma)
+            {
+                case "Castellano": idioma = "es"; break;
+                case "Català": idioma = "ca"; break;
+                case "English": idioma = "en"; break;
+            }
 
-            if (!File.Exists(rutaDestinoImagen))
+            string nombreImagen = Path.GetFileName(origen).Trim();
+            string rutaDestinoImagen = destino + nombreImagen.Split('.')[0] + "_" + idioma + "_" + id + "." + nombreImagen.Split('.')[1];
+
+            if (!File.Exists(rutaDestinoImagen.ToLower()))
+            {
                 //Con el último parámetro indicamos que queremos sobreescribir la imagen en caso de que ya exista en la rutaDestinoImagen.
-                File.Copy(origen, rutaDestinoImagen, true);
+                File.Copy(origen, rutaDestinoImagen.ToLower(), true);
+            }
 
-            return rutaDestinoImagen;
+            return rutaDestinoImagen.ToLower();
         }
 
         /// <summary>
@@ -282,24 +290,31 @@ namespace EduJoc_CepSoft
             {
                 if (!existePersonaje(txtboxNombre.Text, cmbIdioma.Text))
                 {
-                    String idioma = "";
-                    switch (cmbIdioma.Text)
-                    {
-                        case "Castellano": idioma = "es";
-                            break;
-                        case "Català": idioma = "ca";
-                            break;
-                        case "English": idioma = "en";
-                            break;
-
-                    }
                     //Modificamos los datos del personaje quitando los espacios al final de los string.
                     personajeModificar.nombre = txtboxNombre.Text.Trim();
                     personajeModificar.descripcion = txtboxDescripcion.Text.Trim();
                     personajeModificar.idioma = cmbIdioma.Text.Trim();
-                    personajeModificar.rutaImagen = moverImagen(picboxImagen.ImageLocation, RUTA_DIRECTORIO_IMG, personajeModificar.id, idioma);
+
+                    string rutaImagenPrevia = personajeModificar.rutaImagen.ToLower();
+                    string rutaImagenNueva = picboxImagen.ImageLocation;
+
+                    //Comparar si la imagen se ha cambiado.
+                    if (!Path.GetFileName(rutaImagenPrevia).Equals(Path.GetFileName(rutaImagenNueva)))
+                    {
+                        //Eliminamos la imagen previa si se ha cambiado.
+                        File.Delete(rutaImagenPrevia);
+
+                        //Insertamos la nueva ruta de imagen.
+                        personajeModificar.rutaImagen = moverImagen(rutaImagenNueva, RUTA_DIRECTORIO_IMG, personajeModificar.id, personajeModificar.idioma).ToLower();
+                    }
+                    else
+                    {
+                        personajeModificar.rutaImagen = picboxImagen.ImageLocation;
+                    }
+
 
                     MessageBox.Show("Personaje modificado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     this.Close();
                 }
                 else
@@ -311,82 +326,52 @@ namespace EduJoc_CepSoft
         }
 
         /// <summary>
-        /// Comprobamos que los campos no estén vacíos. En caso de que lo estén, mostramos un mensaje de error.
+        /// Comprobamos que los campos no estén vacíos. En caso de que lo estén, mostramos un mensaje de error para cada componente.
         /// </summary>
         /// <returns>En caso de que los campos estén rellenados correctamente retornamos true, en caso contrario false.</returns>
         public bool comprobarCampos()
         {
             bool correcto = true;
 
+            errorProvider.Clear();
+
             if (string.IsNullOrEmpty(cmbIdioma.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(cmbIdioma, "Debes seleccionar un idioma.");
             }
-            else if (string.IsNullOrEmpty(txtboxNombre.Text.Trim()))
+
+            if (string.IsNullOrEmpty(txtboxNombre.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(txtboxNombre, "Debes escribir el nombre del personaje.");
             }
-            else if (string.IsNullOrEmpty(txtboxDescripcion.Text.Trim()))
+
+            if (string.IsNullOrEmpty(txtboxDescripcion.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(txtboxDescripcion, "Debes escribir la descripción del personaje.");
             }
-            else if (picboxImagen.Image == null)
+
+            if (picboxImagen.Image == null)
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(picboxImagen, "Debes seleccionar una imagen.");
             }
 
+            lblError.Text = "HAY CAMPOS SIN RELLENAR";
+
             return correcto;
-        }
-
-
-        /// <summary>
-        /// Mostrar error y poner el foco al textbox.
-        /// </summary>
-        /// <param name="textBox">El textbox que va a recibir el foco.</param>
-        /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
-        public void mostrarError(TextBox textBox, string missatge)
-        {
-            errorProvider.SetError(textBox, missatge);
-
-            //Mostramos el mensaje también en un sitio visible del formulario.
-            lblError.Text = missatge.ToUpper();
-            textBox.Focus();
-        }
-
-        /// <summary>
-        /// Mostrar error y poner el foco al combobox.
-        /// </summary>
-        /// <param name="comboBox">El comboBox que va a recibir el foco.</param>
-        /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
-        public void mostrarError(ComboBox comboBox, string missatge)
-        {
-            errorProvider.SetError(comboBox, missatge);
-
-            //Mostramos el mensaje también en un sitio visible del formulario.
-            lblError.Text = missatge.ToUpper();
-            comboBox.Focus();
         }
 
         /// <summary>
         /// Mostrar error.
         /// </summary>
-        /// <param name="pictureBox">El pictureBox con el que vamos a trabajar.</param>
-        /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
-        public void mostrarError(PictureBox pictureBox, string missatge)
+        /// <param name="control">El control con el que vamos a mostrar el error.</param>
+        /// <param name="mensaje">El mensaje de error que vamos a mostrar.</param>
+        public void mostrarError(Control control, string mensaje)
         {
-            errorProvider.SetError(pictureBox, missatge);
-
-            //Mostramos el mensaje también en un sitio visible del formulario.
-            lblError.Text = missatge.ToUpper();
-            pictureBox.Focus();
+            errorProvider.SetError(control, mensaje);
         }
 
         /// <summary>
@@ -403,7 +388,7 @@ namespace EduJoc_CepSoft
                 //Si seleccionamos un archivo y le damos al botón "Abrir":
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    
+
 
                     //Guardamos la ruta del archivo seleccionado.
                     string ruta_imagen = openFileDialog.FileName;

@@ -40,10 +40,9 @@
             this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.InitialImage = null;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(227, 36);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(170, 29);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(604, 363);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(453, 295);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -56,10 +55,9 @@
             this.btnPreguntas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreguntas.Image = ((System.Drawing.Image)(resources.GetObject("btnPreguntas.Image")));
             this.btnPreguntas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPreguntas.Location = new System.Drawing.Point(227, 438);
-            this.btnPreguntas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPreguntas.Location = new System.Drawing.Point(170, 356);
             this.btnPreguntas.Name = "btnPreguntas";
-            this.btnPreguntas.Size = new System.Drawing.Size(276, 68);
+            this.btnPreguntas.Size = new System.Drawing.Size(207, 55);
             this.btnPreguntas.TabIndex = 1;
             this.btnPreguntas.Text = "Gestionar Preguntas";
             this.btnPreguntas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -73,10 +71,9 @@
             this.btnPersonajes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPersonajes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonajes.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonajes.Image")));
-            this.btnPersonajes.Location = new System.Drawing.Point(555, 438);
-            this.btnPersonajes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPersonajes.Location = new System.Drawing.Point(416, 356);
             this.btnPersonajes.Name = "btnPersonajes";
-            this.btnPersonajes.Size = new System.Drawing.Size(276, 68);
+            this.btnPersonajes.Size = new System.Drawing.Size(207, 55);
             this.btnPersonajes.TabIndex = 2;
             this.btnPersonajes.Text = "Gestionar Personajes";
             this.btnPersonajes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -85,15 +82,14 @@
             // 
             // FormPresentacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1056, 554);
+            this.ClientSize = new System.Drawing.Size(792, 450);
             this.Controls.Add(this.btnPersonajes);
             this.Controls.Add(this.btnPreguntas);
             this.Controls.Add(this.pictureBoxLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPresentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EcoArts";

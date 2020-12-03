@@ -260,7 +260,7 @@ namespace EduJoc_CepSoft
         private void btnPersonajes_Click(object sender, System.EventArgs e)
         {
             //creamos nuevo formulario gestionarPersonaje
-            GestionarPersonajes gestionarPersonaje = new GestionarPersonajes();
+            FormPersonajes gestionarPersonaje = new FormPersonajes();
             //y lo mostramos
             gestionarPersonaje.ShowDialog();
         }

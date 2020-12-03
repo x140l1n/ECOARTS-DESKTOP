@@ -53,9 +53,9 @@
             this.lblDescCatalan.Location = new System.Drawing.Point(529, 76);
             this.lblDescCatalan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescCatalan.Name = "lblDescCatalan";
-            this.lblDescCatalan.Size = new System.Drawing.Size(94, 17);
+            this.lblDescCatalan.Size = new System.Drawing.Size(100, 17);
             this.lblDescCatalan.TabIndex = 15;
-            this.lblDescCatalan.Text = "Descripción: ";
+            this.lblDescCatalan.Text = "Descripción: *";
             // 
             // txtboxDescripcion
             // 
@@ -63,7 +63,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtboxDescripcion.Location = new System.Drawing.Point(532, 97);
-            this.txtboxDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxDescripcion.Multiline = true;
             this.txtboxDescripcion.Name = "txtboxDescripcion";
             this.txtboxDescripcion.Size = new System.Drawing.Size(582, 390);
@@ -76,7 +76,7 @@
             this.btnInsertarModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertarModificar.ForeColor = System.Drawing.Color.White;
             this.btnInsertarModificar.Location = new System.Drawing.Point(987, 505);
-            this.btnInsertarModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertarModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertarModificar.Name = "btnInsertarModificar";
             this.btnInsertarModificar.Size = new System.Drawing.Size(127, 32);
             this.btnInsertarModificar.TabIndex = 22;
@@ -89,7 +89,7 @@
             this.picboxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.picboxImagen.Location = new System.Drawing.Point(19, 97);
-            this.picboxImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picboxImagen.Margin = new System.Windows.Forms.Padding(4);
             this.picboxImagen.Name = "picboxImagen";
             this.picboxImagen.Size = new System.Drawing.Size(496, 390);
             this.picboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,8 +98,8 @@
             // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(80, 67);
-            this.btnImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImagen.Location = new System.Drawing.Point(94, 67);
+            this.btnImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(38, 28);
             this.btnImagen.TabIndex = 14;
@@ -110,19 +110,19 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(13, 76);
+            this.lblImagen.Location = new System.Drawing.Point(16, 76);
             this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(60, 17);
+            this.lblImagen.Size = new System.Drawing.Size(70, 17);
             this.lblImagen.TabIndex = 13;
-            this.lblImagen.Text = "Imagen:";
+            this.lblImagen.Text = "Imagen: *";
             // 
             // txtboxNombre
             // 
             this.txtboxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtboxNombre.Location = new System.Drawing.Point(532, 34);
-            this.txtboxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxNombre.Name = "txtboxNombre";
             this.txtboxNombre.Size = new System.Drawing.Size(582, 25);
             this.txtboxNombre.TabIndex = 12;
@@ -134,9 +134,9 @@
             this.lblNombre.Location = new System.Drawing.Point(529, 13);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(64, 17);
+            this.lblNombre.Size = new System.Drawing.Size(74, 17);
             this.lblNombre.TabIndex = 11;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "Nombre: *";
             // 
             // lblId
             // 
@@ -152,10 +152,10 @@
             // 
             this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdioma.FormattingEnabled = true;
-            this.cmbIdioma.Location = new System.Drawing.Point(16, 34);
+            this.cmbIdioma.Location = new System.Drawing.Point(19, 34);
             this.cmbIdioma.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(102, 25);
+            this.cmbIdioma.Size = new System.Drawing.Size(113, 25);
             this.cmbIdioma.TabIndex = 25;
             // 
             // lblIdioma
@@ -164,9 +164,9 @@
             this.lblIdioma.Location = new System.Drawing.Point(16, 13);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(59, 17);
+            this.lblIdioma.Size = new System.Drawing.Size(65, 17);
             this.lblIdioma.TabIndex = 24;
-            this.lblIdioma.Text = "Idioma: ";
+            this.lblIdioma.Text = "Idioma: *";
             // 
             // lblError
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InsertarModificarPersonaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insertar Personaje";

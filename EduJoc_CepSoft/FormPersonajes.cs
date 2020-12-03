@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace EduJoc_CepSoft
 {
-    public partial class GestionarPersonajes : Form
+    public partial class FormPersonajes : Form
     {
         private const string PERSONAJES_JSON_ES = ".//Personajes/personajes_es.json";
         private const string PERSONAJES_JSON_EN = ".//Personajes/personajes_en.json";
@@ -26,10 +22,10 @@ namespace EduJoc_CepSoft
         private BindingList<Personaje> personajes_ca;
         private BindingList<Personaje> personajes_en;
 
-        public GestionarPersonajes()
+        public FormPersonajes()
         {
             InitializeComponent();
-            
+
             personajes_es = new BindingList<Personaje>();
             personajes_ca = new BindingList<Personaje>();
             personajes_en = new BindingList<Personaje>();
@@ -174,13 +170,13 @@ namespace EduJoc_CepSoft
 
                     case "Català":
                         InsertarModificarPersonaje modificarPersonajeCa = new InsertarModificarPersonaje(personajeSeleccionado, personajes_ca);
-                        modificarPersonajeCa.ShowDialog(); 
+                        modificarPersonajeCa.ShowDialog();
 
                         break;
 
                     case "English":
                         InsertarModificarPersonaje modificarPersonajeEn = new InsertarModificarPersonaje(personajeSeleccionado, personajes_en);
-                        modificarPersonajeEn.ShowDialog(); 
+                        modificarPersonajeEn.ShowDialog();
 
                         break;
                 }
@@ -200,7 +196,6 @@ namespace EduJoc_CepSoft
 
                 if (opcion == DialogResult.Yes)
                 {
-                   
                     //En caso de que aceptemos, eliminamos el personaje dependiendo del idioma que tenga como atributo.
                     switch (personajeSeleccionado.idioma)
                     {
@@ -214,9 +209,18 @@ namespace EduJoc_CepSoft
                             personajes_en.Remove(personajeSeleccionado);
                             break;
                     }
+
                     //Actualizamos la grid una vez hayamos eliminado el personaje.
                     ActualizarGrid();
-                    
+
+                    //Guardamos la ruta para luego borrar la imagen.
+                    string ruta = personajeSeleccionado.rutaImagen;
+
+                    //Borrar de la memória el objeto.
+                    personajeSeleccionado = null;
+
+                    //Una vez borrado el objeto podemos eliminar la imagen sin problemas sin que nos de error de que está en uso.
+                    File.Delete(ruta);
                 }
             }
         }

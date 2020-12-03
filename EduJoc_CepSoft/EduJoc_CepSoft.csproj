@@ -67,11 +67,11 @@
     <Compile Include="FormPreguntas.Designer.cs">
       <DependentUpon>FormPreguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarPersonajes.cs">
+    <Compile Include="FormPersonajes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarPersonajes.Designer.cs">
-      <DependentUpon>GestionarPersonajes.cs</DependentUpon>
+    <Compile Include="FormPersonajes.Designer.cs">
+      <DependentUpon>FormPersonajes.cs</DependentUpon>
     </Compile>
     <Compile Include="InsertarModificarPersonaje.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="FormPreguntas.resx">
       <DependentUpon>FormPreguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarPersonajes.resx">
-      <DependentUpon>GestionarPersonajes.cs</DependentUpon>
+    <EmbeddedResource Include="FormPersonajes.resx">
+      <DependentUpon>FormPersonajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarModificarPersonaje.resx">
       <DependentUpon>InsertarModificarPersonaje.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace EduJoc_CepSoft
         private BindingList<Pregunta> preguntas_es = null;
         private BindingList<Pregunta> preguntas_ca = null;
         private BindingList<Pregunta> preguntas_en = null;
-        
+
         private Pregunta preguntaModificar;
         //boolean para saber si estamos modificando o insertando
         private bool modificar;
@@ -92,12 +92,13 @@ namespace EduJoc_CepSoft
             tbtResp3.Text = preguntaModificar.respuestas[2].respuesta;
 
             //Radiobuttons.
-            
+
             if (preguntaModificar.respuestas[0].correcta == true)
             {
                 rdbtnResp1.Checked = true;
 
-            }else if(preguntaModificar.respuestas[1].correcta == true)
+            }
+            else if (preguntaModificar.respuestas[1].correcta == true)
             {
                 rdbtnResp2.Checked = true;
             }
@@ -105,7 +106,7 @@ namespace EduJoc_CepSoft
             {
                 rdbtnResp3.Checked = true;
             }
-            
+
             //titulo formulario cambiado a modificar, tambien boton
             this.Text = "Modificar pregunta";
 
@@ -218,7 +219,7 @@ namespace EduJoc_CepSoft
                 }
                 //inforamcion para el usuario de ok a insercion
                 MessageBox.Show("Pregunta creada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               //cerramos formulario
+                //cerramos formulario
                 this.Close();
             }
         }
@@ -258,82 +259,65 @@ namespace EduJoc_CepSoft
         {
             //por defecto true
             bool correcto = true;
+
+            errorProvider.Clear();
+
             //miramos si el campo text del combobox tema esta vacio o es null
             if (string.IsNullOrEmpty(cmbTema.Text.Trim()))
             {
                 //en caso que sea null o vacio cambiamos correcto a false, limpiamos posibles errores
                 //en pantalla anteriores y mostramos error a usuario
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(cmbTema, "Debes de seleccionar un tema.");
             }
             //hacemos los mismo que anterior para comboBOx idioma
-            else if (string.IsNullOrEmpty(cmbIdioma.Text.Trim()))
+
+            if (string.IsNullOrEmpty(cmbIdioma.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(cmbIdioma, "Debes de seleccionar un idioma.");
             }
             //hacemos los mismo que anterior para textBox pregunta
-            else if (string.IsNullOrEmpty(tbtPregunta.Text.Trim()))
+
+            if (string.IsNullOrEmpty(tbtPregunta.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(tbtPregunta, "Debes de escribir una pregunta.");
             }
             //hacemos los mismo que anterior para textBox respuesta1, 2 y 3
-            else if (string.IsNullOrEmpty(tbtResp1.Text.Trim()))
+
+            if (string.IsNullOrEmpty(tbtResp1.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(tbtResp1, "Debes de escribir la respuesta 1.");
             }
-            else if (string.IsNullOrEmpty(tbtResp2.Text.Trim()))
+
+            if (string.IsNullOrEmpty(tbtResp2.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(tbtResp2, "Debes de escribir la respuesta 2.");
             }
-            else if (string.IsNullOrEmpty(tbtResp3.Text.Trim()))
+
+            if (string.IsNullOrEmpty(tbtResp3.Text.Trim()))
             {
                 correcto = false;
-                errorProvider.Clear();
                 mostrarError(tbtResp3, "Debes de escribir la respuesta 3.");
             }
+
+            lblError.Text = "HAY CAMPOS SIN RELLENAR";
+
             //si no ha entrado en ningun if retornaremos true. en caso contrario retornamos false
             return correcto;
         }
 
         /// <summary>
-        /// Mostrar error y poner el foco al textbox.
+        /// Mostrar error.
         /// </summary>
-        /// <param name="textBox">El textbox que va a recibir el foco.</param>
-        /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
-        //funciona que no devuelve nada y recibe el textBox donde detecta error asi como el mensaje que se mostrará al usuario
-        public void mostrarError(TextBox textBox, string missatge)
+        /// <param name="control">El control con el que vamos a mostrar el error.</param>
+        /// <param name="mensaje">El mensaje de error que vamos a mostrar.</param>
+        public void mostrarError(Control control, string mensaje)
         {
-            //especificamos mensaje a usuario
-            errorProvider.SetError(textBox, missatge);
-
-            //Mostramos el mensaje tambien en lugar visible del formulario.
-            lblError.Text = missatge.ToUpper();
-            //ponemos foco de escritura
-            textBox.Focus();
-        }
-
-        /// <summary>
-        /// Mostrar error y poner el foco al combobox.
-        /// </summary>
-        /// <param name="comboBox">El comboBox que va a recibir el foco.</param>
-        /// <param name="missatge">El mensaje de error que vamos a mostrar.</param>
-        //igual que anterior pero con comboBox 
-        public void mostrarError(ComboBox comboBox, string missatge)
-        {
-            errorProvider.SetError(comboBox, missatge);
-
-            //Mostrem el missatge també en un lloc visible del formulari.
-            lblError.Text = missatge.ToUpper();
-            comboBox.Focus();
+            errorProvider.SetError(control, mensaje);
         }
     }
 }

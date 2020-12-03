@@ -13,7 +13,8 @@ namespace EduJoc_CepSoft
         public string idioma { set; get; }
         public string rutaImagen { set; get; }
         [JsonIgnore]
-        public Image imagen { get { return (Image)Resize(Image.FromFile(rutaImagen), 80, 80); } }
+        //El try catch nos servirá para que el programa no pete. Devolverá null, y en editar personaje podemos añadir la imagen correcta.
+        public Image imagen { set { } get { try { return (Image)Resize(Image.FromFile(rutaImagen), 80, 80); } catch (Exception e) { return null; } } }
         public string descripcion { set; get; }
 
         public Personaje(int id, string nombre, string idioma, string rutaImagen, string descripcion)

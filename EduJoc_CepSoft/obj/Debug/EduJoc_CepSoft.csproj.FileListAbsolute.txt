@@ -48,3 +48,20 @@ D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
 E:\DAM2A\M13 - Projecte desenvolupament d'aplicacions multiplataforma\Projecte Escriptori\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPresentacion.resources
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPreguntas.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\bin\Debug\EcoArts.exe
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPresentacion.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPreguntas.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPersonaje.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EcoArts.exe
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
+E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources
