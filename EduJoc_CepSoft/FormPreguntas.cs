@@ -11,12 +11,13 @@ namespace EduJoc_CepSoft
     public partial class FormPreguntas : Form
     {
         //variables para archivos json
-        private const string PREGUNTAS_JSON_ES = ".//Preguntas//preguntas_es.json";
-        private const string PREGUNTAS_JSON_CA = ".//Preguntas//preguntas_ca.json";
-        private const string PREGUNTAS_JSON_EN = ".//Preguntas//preguntas_en.json";
+        private const string PREGUNTAS_JSON_ES = ".//preguntas//preguntas_es.json";
+        private const string PREGUNTAS_JSON_CA = ".//preguntas//preguntas_ca.json";
+        private const string PREGUNTAS_JSON_EN = ".//preguntas//preguntas_en.json";
 
         private const string TEMAS_JSON = "temas.json";
         private const string IDIOMAS_JSON = "idiomas.json";
+
         //binding list donde se guardará la informacion de las preguntas
         private BindingList<Pregunta> preguntas_es;
         private BindingList<Pregunta> preguntas_ca;
@@ -30,10 +31,11 @@ namespace EduJoc_CepSoft
             preguntas_ca = new BindingList<Pregunta>();
             preguntas_en = new BindingList<Pregunta>();
         }
+
         //funcion load al cargar el programa
         private void FormPrincipal_Load(object sender, System.EventArgs e)
         {
-            
+
             //llamamos a la funcion cargarTemas y cargarIdiomas para rellenar comboBox 
             cargarTemas();
             cargarIdiomas();

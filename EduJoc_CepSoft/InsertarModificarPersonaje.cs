@@ -26,7 +26,7 @@ namespace EduJoc_CepSoft
 
         private bool modificar;
 
-        private const string RUTA_DIRECTORIO_IMG = ".//Personajes//img//";
+        private const string RUTA_DIRECTORIO_IMG = ".//personajes//img//";
 
         /// <summary>
         /// Cuando insertamos.

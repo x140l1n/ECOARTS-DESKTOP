@@ -11,9 +11,9 @@ namespace EduJoc_CepSoft
 {
     public partial class FormPersonajes : Form
     {
-        private const string PERSONAJES_JSON_ES = ".//Personajes/personajes_es.json";
-        private const string PERSONAJES_JSON_EN = ".//Personajes/personajes_en.json";
-        private const string PERSONAJES_JSON_CA = ".//Personajes/personajes_ca.json";
+        private const string PERSONAJES_JSON_ES = ".//personajes//personajes_es.json";
+        private const string PERSONAJES_JSON_EN = ".//personajes//personajes_en.json";
+        private const string PERSONAJES_JSON_CA = ".//personajes//personajes_ca.json";
 
 
         private const string IDIOMAS_JSON = "idiomas.json";
