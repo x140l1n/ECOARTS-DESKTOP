@@ -304,7 +304,7 @@ namespace EduJoc_CepSoft
                 mostrarError(tbtResp3, "Debes de escribir la respuesta 3.");
             }
 
-            lblError.Text = "HAY CAMPOS SIN RELLENAR";
+            if (!correcto) lblError.Text = "HAY CAMPOS SIN RELLENAR";
 
             //si no ha entrado en ningun if retornaremos true. en caso contrario retornamos false
             return correcto;
