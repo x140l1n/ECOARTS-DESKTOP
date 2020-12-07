@@ -359,7 +359,7 @@ namespace EduJoc_CepSoft
                 mostrarError(picboxImagen, "Debes seleccionar una imagen.");
             }
 
-            lblError.Text = "HAY CAMPOS SIN RELLENAR";
+            if (!correcto) lblError.Text = "HAY CAMPOS SIN RELLENAR";
 
             return correcto;
         }
