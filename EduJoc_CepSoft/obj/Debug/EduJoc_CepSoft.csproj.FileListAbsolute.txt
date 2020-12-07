@@ -35,7 +35,6 @@ D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
-D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.GestionarPersonajes.resources
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPersonaje.resources
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
@@ -65,3 +64,4 @@ E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EcoArts.exe
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources

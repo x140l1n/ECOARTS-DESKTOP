@@ -88,6 +88,7 @@ namespace EduJoc_CepSoft
         /// <param name="path_json"></param>
         private void GuardarPersonajes(BindingList<Personaje> personajes, string path_json)
         {
+            path_json = path_json.ToLower();
             JArray arrayPersonajes = (JArray)JToken.FromObject(personajes);
             StreamWriter ficheroSalida = File.CreateText(path_json);
             JsonTextWriter jsonTextWriter = new JsonTextWriter(ficheroSalida);
