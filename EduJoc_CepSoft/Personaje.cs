@@ -36,7 +36,14 @@ namespace EduJoc_CepSoft
             return (this.nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
         }
 
-        public static Bitmap Resize(Image image, int width, int height)
+        /// <summary>
+        /// Cambiar el tamaño de la imagen y poder acomodarlo en la datagridview.
+        /// </summary>
+        /// <param name="image">El objeto Image donde contedrá la imagen.</param>
+        /// <param name="width">El ancho que queremos poner (px).</param>
+        /// <param name="height">La altura que queremos poner (px).</param>
+        /// <returns></returns>
+        private Bitmap Resize(Image image, int width, int height)
         {
             var destRect = new Rectangle(0, 0, width, height);
             var destImage = new Bitmap(width, height);
@@ -57,6 +64,9 @@ namespace EduJoc_CepSoft
                     graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
                 }
             }
+
+            //Liberamos los recursos de la imagen para posteriormente poder eliminar la imagen sin problemas.
+            image.Dispose();
 
             return destImage;
         }

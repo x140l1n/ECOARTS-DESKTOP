@@ -15,7 +15,6 @@ namespace EduJoc_CepSoft
         private const string PERSONAJES_JSON_EN = ".//personajes//personajes_en.json";
         private const string PERSONAJES_JSON_CA = ".//personajes//personajes_ca.json";
 
-
         private const string IDIOMAS_JSON = "idiomas.json";
 
         private BindingList<Personaje> personajes_es;
@@ -88,7 +87,6 @@ namespace EduJoc_CepSoft
         /// <param name="path_json"></param>
         private void GuardarPersonajes(BindingList<Personaje> personajes, string path_json)
         {
-            path_json = path_json.ToLower();
             JArray arrayPersonajes = (JArray)JToken.FromObject(personajes);
             StreamWriter ficheroSalida = File.CreateText(path_json);
             JsonTextWriter jsonTextWriter = new JsonTextWriter(ficheroSalida);
