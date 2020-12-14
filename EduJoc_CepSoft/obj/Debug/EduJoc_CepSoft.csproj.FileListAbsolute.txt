@@ -65,3 +65,21 @@ E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
 E:\CEP\DAM2\ABP\EduJoc_CepSoft\ProyectoEscritorioCEP_1\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources
 D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\bin\Debug\EcoArts.exe.config
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\bin\Debug\EcoArts.exe
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\bin\Debug\EcoArts.pdb
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.dll
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\bin\Debug\Newtonsoft.Json.xml
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csprojAssemblyReference.cache
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPresentacion.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPreguntas.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.FormPersonajes.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPersonaje.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.InsertarModificarPregunta.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.Properties.Resources.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.VerRespuestas.resources
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.GenerateResource.cache
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CoreCompileInputs.cache
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EduJoc_CepSoft.csproj.CopyComplete
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EcoArts.exe
+D:\DOCUMENTS\CEPNET\DAM2\Projecte\CEPSOFT ESCRIPTORI\EduJoc_CepSoft\obj\Debug\EcoArts.pdb
