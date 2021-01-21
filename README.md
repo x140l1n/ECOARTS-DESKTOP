@@ -5,7 +5,7 @@ La aplicación genera unos json de preguntas y personajes en la ruta: \EduJoc_Ce
 
 Debemos de incluir las carpetas de personajes y preguntas en la carpeta del juego en android.
 
-Proyecto realizado en Centre d'Estudis Politécnics.
+Proyecto realizado en Centre d'Estudis Politècnics.
 
 ![Logo](https://github.com/x140l1n/ProyectoEscritorioCEP_1/blob/master/EduJoc_CepSoft/EcoArtsLogo.ico)
 
