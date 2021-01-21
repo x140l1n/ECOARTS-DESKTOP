@@ -7,7 +7,7 @@ Debemos de incluir las carpetas de personajes y preguntas en la carpeta del jueg
 
 Proyecto realizado en Centre d'Estudis Politécnics.
 
-![Logo](https://raw.githubusercontent.com/x140l1n/ProyectoEscritorioCEP_1/master/EduJoc_CepSoft/EcoArtsLogo.ico?token=AMIK5BJBILHR3P2V4O6WUXDABFO5M)
+![Logo](https://github.com/x140l1n/ProyectoEscritorioCEP_1/blob/master/EduJoc_CepSoft/EcoArtsLogo.ico)
 
 VERSIÓN 1.0
 
