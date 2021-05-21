@@ -1,5 +1,5 @@
 # ECOARTS DESKTOP (Gestión de preguntas y personajes)
-Aplicación de escritorio para gestionar las preguntas y personajes del juego ECOARTS Android.
+Aplicación de escritorio para gestionar las preguntas y personajes del juego ECOARTS.
 
 La aplicación genera JSON de preguntas y personajes en la ruta: \EduJoc_CepSoft\bin\Debug\
 
